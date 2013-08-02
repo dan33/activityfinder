@@ -4,4 +4,5 @@ ActivityFinder::Application.routes.draw do
   root :to => "home#index"
 
   resources :users, :only => [:index, :show]
+  resources :activities, :only => [:new, :create, :index, :show]
 end

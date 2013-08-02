@@ -1,7 +1,8 @@
 require 'spec_helper'
 
 describe UsersController do
-  describe "GET for index" do
+
+  describe "GET #index" do
     before do
       5.times { |i| @user = FactoryGirl.create(:user) }
     end
@@ -24,14 +25,14 @@ describe UsersController do
     end
   end
 
-  describe 'GET to show' do
+  describe "GET #show" do
     before do
       @user = FactoryGirl.create(:user)
     end
 
-    it "should render the show template" do
+    it "renders the #show view" do
       get :show, {:id => @user.id}
-      expect(response).to render_template("show")
+      response.should render_template :show
     end
   end
 end

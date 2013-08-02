@@ -10,4 +10,12 @@ class ActivitiesController < ApplicationController
     @activity.save
   end
 
+  def index
+    @activities = Activity.all
+  end
+
+  def show
+    @activity = Activity.find(params[:id])
+  end
+
 end
