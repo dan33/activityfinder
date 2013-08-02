@@ -14,27 +14,27 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-08-02T20:15:13+10:00">2013-08-02T20:15:13+10:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-08-02T21:58:52+10:00">2013-08-02T21:58:52+10:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.35%</span></span>
+    (<span class="covered_percent"><span class="green">98.11%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.05
+         2.27
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>41</b> files in total.
-    <b>243</b> relevant lines. 
-    <span class="green"><b>239</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed </span>
+    <b>264</b> relevant lines. 
+    <span class="green"><b>259</b> lines covered</span> and
+    <span class="red"><b>5</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -84,10 +84,10 @@
         <td class="strong"><a href="#3a77d518b10ab6f6ac95db22e96f12cf356d7628" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>9</td>
-        <td>2</td>
-        <td>2</td>
+        <td>3</td>
+        <td>3</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -177,7 +177,7 @@
         <td>15</td>
         <td>15</td>
         <td>0</td>
-        <td>10.5</td>
+        <td>13.4</td>
       </tr>
       
       <tr>
@@ -303,9 +303,9 @@
       <tr>
         <td class="strong"><a href="#086c69e82ef8af4d12999ce164d5ba8150b5d7dd" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>7</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -322,12 +322,12 @@
       
       <tr>
         <td class="strong"><a href="#854f71b243eb500d1c9a7383da8f4b0651a9c1fa" class="src_link" title="spec/controllers/users_controller_spec.rb">spec/controllers/users_controller_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>5</td>
-        <td>2</td>
-        <td>2</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td class="green strong">95.24 %</td>
+        <td>37</td>
+        <td>21</td>
+        <td>20</td>
+        <td>1</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
@@ -377,7 +377,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>18.5</td>
+        <td>24.0</td>
       </tr>
       
       <tr>
@@ -661,8 +661,8 @@
     <h3>app/controllers/users_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -688,10 +688,10 @@
           <code class="ruby">	def index</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    @users = User.all</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
@@ -1612,26 +1612,26 @@
           <code class="ruby">  def geocode</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="31">
-          <span class="hits">37</span>
+        <li class="covered" data-hits="48" data-linenumber="31">
+          <span class="hits">48</span>
           
           <code class="ruby">    result = Geocoder.search(self.city).first</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="32">
-          <span class="hits">37</span>
+        <li class="covered" data-hits="48" data-linenumber="32">
+          <span class="hits">48</span>
           
           <code class="ruby">      if result.present?</code>
         </li>
       
-        <li class="covered" data-hits="35" data-linenumber="33">
-          <span class="hits">35</span>
+        <li class="covered" data-hits="46" data-linenumber="33">
+          <span class="hits">46</span>
           
           <code class="ruby">        self.latitude = result.latitude</code>
         </li>
       
-        <li class="covered" data-hits="35" data-linenumber="34">
-          <span class="hits">35</span>
+        <li class="covered" data-hits="46" data-linenumber="34">
+          <span class="hits">46</span>
           
           <code class="ruby">        self.longitude = result.longitude</code>
         </li>
@@ -5275,8 +5275,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5309,6 +5309,18 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  resources :users, :only =&gt; [:index]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">end</code>
@@ -5369,11 +5381,11 @@
         <div class="source_table" id="854f71b243eb500d1c9a7383da8f4b0651a9c1fa">
   <div class="header">
     <h3>spec/controllers/users_controller_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="green">95.24 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>21</b> relevant lines. 
+      <span class="green"><b>20</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -5398,13 +5410,205 @@
           <code class="ruby">describe UsersController do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;GET for index&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    before do</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="6">
+          <span class="hits">12</span>
+          
+          <code class="ruby">      5.times { |i| @user = FactoryGirl.create(:user) }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    describe 'as HTML' do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      before do</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        get :index</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &quot;should respond with a status 200&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(response).to be_success</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(response.status).to eq(200)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &quot;should give the users in an instance variable&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(assigns(:users)).to be</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(assigns(:users).length).to eq(5)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(assigns(:users).first.class).to eq(User)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe 'GET to show' do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    before do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @user = FactoryGirl.create(:user)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;should render the show template&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get :show, {:id =&gt; @user.id}</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="34">
+          
+          
+          <code class="ruby">      expect(response).to render_template(&quot;show&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">end</code>
@@ -5722,26 +5926,26 @@
           <code class="ruby">  factory :user do</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="5">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="47" data-linenumber="5">
+          <span class="hits">47</span>
           
           <code class="ruby">    name {Faker::Name.name}</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="6">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="47" data-linenumber="6">
+          <span class="hits">47</span>
           
           <code class="ruby">    email {Faker::Internet.email}</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="7">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="47" data-linenumber="7">
+          <span class="hits">47</span>
           
           <code class="ruby">    gender {[&quot;male&quot;, &quot;female&quot;].sample}</code>
         </li>
       
-        <li class="covered" data-hits="36" data-linenumber="8">
-          <span class="hits">36</span>
+        <li class="covered" data-hits="47" data-linenumber="8">
+          <span class="hits">47</span>
           
           <code class="ruby">    city {[&quot;Sydney&quot;, &quot;Melbourne&quot;, &quot;Perth&quot;, &quot;Adelaide&quot;, &quot;Brisbane&quot;].sample}</code>
         </li>
