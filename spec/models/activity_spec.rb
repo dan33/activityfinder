@@ -16,7 +16,7 @@
 require 'spec_helper'
 
 describe Activity do
-  describe "A valid activity" do
+  describe "An activity" do
     before do
       @activity = FactoryGirl.create(:activity)
       @user = FactoryGirl.create(:user)
@@ -33,5 +33,11 @@ describe Activity do
       expect(@activity.longitude).not_to eq(nil)
     end
 
+    it "should have valid Information" do
+      expect(@activity.title).not_to eq(nil)
+      expect(@activity.description).not_to eq(nil)
+      expect(@activity.address).not_to eq(nil)
+      expect(@activity.category_id).not_to eq(nil)
+    end
   end
 end

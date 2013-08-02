@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/environment.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/application.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/config/application.rb": [
         1,
         null,
         null,
@@ -81,7 +81,7 @@
         null,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/boot.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/config/boot.rb": [
         1,
         null,
         null,
@@ -89,7 +89,7 @@
         null,
         1
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/environments/test.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/config/environments/test.rb": [
         1,
         null,
         null,
@@ -128,7 +128,7 @@
         1,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/backtrace_silencers.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -137,7 +137,7 @@
         null,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/devise.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -369,23 +369,6 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -402,14 +385,31 @@
         null,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/mime_types.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
         null,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/secret_token.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -418,7 +418,7 @@
         null,
         1
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/session_store.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/config/initializers/session_store.rb": [
         null,
         null,
         1,
@@ -428,7 +428,7 @@
         null,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/wrap_parameters.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -444,30 +444,30 @@
         1,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/routes.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/config/routes.rb": [
         1,
         1,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/controllers/application_controller.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/controllers/application_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/helpers/application_helper.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/helpers/activities_helper.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/helpers/activities_helper.rb": [
         1,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/helpers/users_helper.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/controllers/activities_controller.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/controllers/activities_controller.rb": [
         1,
         null,
         1,
@@ -482,7 +482,7 @@
         null,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/models/activity.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/models/activity.rb": [
         null,
         null,
         null,
@@ -499,30 +499,30 @@
         null,
         null,
         1,
-        null,
         1,
         1,
         1,
         1,
-        null,
         1,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
+        null,
+        1,
+        19,
+        19,
+        19,
+        19,
         null,
         null,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/controllers/users_controller.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/controllers/users_controller.rb": [
         1,
         null,
         null,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/models/user.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/models/user.rb": [
         null,
         null,
         null,
@@ -538,26 +538,6 @@
         null,
         1,
         1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/models/comment.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         1,
         1,
@@ -566,7 +546,24 @@
         1,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/models/membership.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/models/category.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/models/comment.rb": [
         null,
         null,
         null,
@@ -586,57 +583,8 @@
         1,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/factories/activities.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/models/membership.rb": [
         null,
-        null,
-        1,
-        1,
-        18,
-        1,
-        18,
-        null,
-        null
-      ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/factories/comments.rb": [
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/factories/memberships.rb": [
-        null,
-        null,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/factories/users.rb": [
-        null,
-        null,
-        1,
-        1,
-        30,
-        30,
-        30,
-        30,
-        null,
-        null
-      ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/controllers/users_controller_spec.rb": [
-        1,
-        null,
-        1,
-        null,
-        null
-      ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/helpers/activities_helper_spec.rb": [
-        1,
         null,
         null,
         null,
@@ -649,10 +597,73 @@
         null,
         null,
         1,
+        1,
+        1,
+        null,
         1,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/helpers/users_helper_spec.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/factories/activities.rb": [
+        null,
+        null,
+        1,
+        1,
+        19,
+        1,
+        19,
+        19,
+        null,
+        null,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/factories/categories.rb": [
+        null,
+        null,
+        1,
+        1,
+        3,
+        null,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/factories/comments.rb": [
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/factories/memberships.rb": [
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/factories/users.rb": [
+        null,
+        null,
+        1,
+        1,
+        31,
+        31,
+        31,
+        31,
+        null,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/controllers/users_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/helpers/activities_helper_spec.rb": [
         1,
         null,
         null,
@@ -669,7 +680,24 @@
         1,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/models/activity_spec.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/helpers/users_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/models/activity_spec.rb": [
         null,
         null,
         null,
@@ -690,9 +718,9 @@
         1,
         1,
         1,
-        5,
-        5,
-        5,
+        6,
+        6,
+        6,
         null,
         null,
         null,
@@ -705,10 +733,43 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/models/comment_spec.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/models/category_spec.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        2,
+        null,
+        null,
+        2,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/models/comment_spec.rb": [
         null,
         null,
         null,
@@ -727,7 +788,7 @@
         1,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/models/membership_spec.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/models/membership_spec.rb": [
         null,
         null,
         null,
@@ -746,7 +807,7 @@
         1,
         null
       ],
-      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/models/user_spec.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/models/user_spec.rb": [
         null,
         null,
         null,
@@ -828,6 +889,6 @@
         null
       ]
     },
-    "timestamp": 1375430161
+    "timestamp": 1375432022
   }
 }

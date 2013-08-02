@@ -18,11 +18,7 @@ development:
   database: activity_finder_development
   pool: 5
   host: localhost
-<<<<<<< HEAD
-  username: andrewobrien
-=======
-  username: danieladdington
->>>>>>> df4147d8f042ddd6ab8e068f1b0d67670b30dca8
+  username: jackjeffress
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -49,11 +45,7 @@ test:
   database: activity_finder_test
   pool: 5
   host: localhost
-<<<<<<< HEAD
-  username: andrewobrien
-=======
-  username: danieladdington
->>>>>>> df4147d8f042ddd6ab8e068f1b0d67670b30dca8
+  username: jackjeffress
   password:
 
 production:
@@ -62,9 +54,5 @@ production:
   database: activity_finder_production
   pool: 5
   host: localhost
-<<<<<<< HEAD
-  username: andrewobrien
-=======
-  username: danieladdington
->>>>>>> df4147d8f042ddd6ab8e068f1b0d67670b30dca8
+  username: jackjeffress
   password:
