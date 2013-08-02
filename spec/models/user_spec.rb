@@ -39,14 +39,21 @@ describe User do
 			expect(@user.activities.count).to eq(1)
 		end
 
+		it "should set longitude and latitude based off city" do
+			expect(@user.longitude).to_not eq(nil)
+			expect(@user.latitude).to_not eq(nil)
+		end
+
 		it "should be a creator if they create an activity" do
 			pending #expect(@user.memberships.first.role).to eq('owner')
 		end
 
 		it "should be a member if join an activity" do
+			pending
 		end
 
 		it "should be able to leave activity if member" do
+			pending
 		end
 
 		it "should not be able to leave activity if creator" do
@@ -69,11 +76,18 @@ describe User do
 
 	describe "An invalid user" do
 		before do
+			@user2000 = User.create(:name => "free", :email => "free@me.com", :city => "rrrrrrrrgjh4", :password => "password", :password_confirmation => "password")
+			@count = User.count
 			@user = User.create(:name => '', :email => '', :gender => '', :city => '')
 		end
 
 		it "should not be created" do
-			expect(User.count).to eq(0)
+			expect(User.count).to eq(@count)
+		end
+
+		it "should set long and lat to AUS default if they don't enter a valid city" do
+			expect(@user2000.latitude).to eq(32.3456)
+			expect(@user2000.longitude).to eq(141.4346)
 		end
 	end
 end

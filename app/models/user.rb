@@ -15,13 +15,26 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
+  before_save :geocode
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable
-	validates_presence_of :email
+	validates_presence_of :name, :email, :city
 
 	has_many :memberships
 	has_many :activities, :through => :memberships
 	has_many :comments
 
 	attr_accessible :email, :name, :city, :gender, :password, :password_confirmation
+
+  def geocode
+    result = Geocoder.search(self.city).first
+      if result.present?
+        self.latitude = result.latitude
+        self.longitude = result.longitude
+      else
+        self.latitude = 32.3456
+        self.longitude = 141.4346
+      end
+  end
 end
