@@ -7,6 +7,7 @@
 #  activity_id :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  role        :string(255)      default("member")
 #
 
 require 'spec_helper'

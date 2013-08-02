@@ -7,10 +7,11 @@
 #  activity_id :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  role        :string(255)      default("member")
 #
 
 class Membership < ActiveRecord::Base
-	has_many :activities
+	belongs_to :activity
 	belongs_to :user
 
   attr_accessible :user_id, :activity_id
