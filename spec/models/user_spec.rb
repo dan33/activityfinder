@@ -17,6 +17,9 @@ describe User do
 	describe 'A valid user' do
 		before do
 			@user = User.create(:name => 'Bob Smith', :email => 'bob@gmail.com', :gender => 'female', :city => 'Sydney')
+			@activity = Activity.new(:title => 'Surfing', :description => 'only Long Reef baby', :address => '9 Suffolk Avenue, Collaroy', :latitude => '-33.745521', :longitude => '151.304459', :category_id => '1')
+			@user.activities << @activity
+			@user.save
 		end
 
 		it { should have_many(:memberships) }
@@ -27,6 +30,10 @@ describe User do
 
 		it "creates a user with valid information" do
 			expect(@user).to be
+		end
+
+		it "should be able to create an activity" do
+			expect(@user.activities.count).to eq(1)
 		end
 	end
 
