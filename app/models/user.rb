@@ -16,8 +16,8 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-	validates_presence_of :name, :email, :city, :gender
+         :recoverable, :rememberable, :trackable
+	validates_presence_of :email
 
 	has_many :memberships
 	has_many :activities, :through => :memberships
