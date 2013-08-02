@@ -6,5 +6,7 @@ FactoryGirl.define do
     email {Faker::Internet.email}
     gender {["male", "female"].sample}
     city {["Sydney", "Melbourne", "Perth", "Adelaide", "Brisbane"].sample}
+    password "feederfeeder"
+    password_confirmation "feederfeeder"
   end
 end

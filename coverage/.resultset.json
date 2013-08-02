@@ -447,6 +447,37 @@
       "/Users/jackjeffress/WDI/javascript/activity_finder/config/routes.rb": [
         1,
         1,
+        null,
+        1,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/models/user.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
         null
       ],
       "/Users/jackjeffress/WDI/javascript/activity_finder/app/controllers/application_controller.rb": [
@@ -460,6 +491,10 @@
         null
       ],
       "/Users/jackjeffress/WDI/javascript/activity_finder/app/helpers/activities_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/helpers/home_helper.rb": [
         1,
         null
       ],
@@ -516,34 +551,21 @@
         null,
         null
       ],
-      "/Users/jackjeffress/WDI/javascript/activity_finder/app/controllers/users_controller.rb": [
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/controllers/home_controller.rb": [
         1,
-        null,
+        1,
         null,
         null
       ],
-      "/Users/jackjeffress/WDI/javascript/activity_finder/app/models/user.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
+      "/Users/jackjeffress/WDI/javascript/activity_finder/app/controllers/users_controller.rb": [
         1,
         null,
         1,
-        1,
-        1,
         null,
-        1,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/jackjeffress/WDI/javascript/activity_finder/app/models/category.rb": [
@@ -653,6 +675,15 @@
         34,
         34,
         34,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/controllers/home_controller_spec.rb": [
+        1,
+        null,
+        1,
         null,
         null
       ],
@@ -664,6 +695,23 @@
         null
       ],
       "/Users/jackjeffress/WDI/javascript/activity_finder/spec/helpers/activities_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/jackjeffress/WDI/javascript/activity_finder/spec/helpers/home_helper_spec.rb": [
         1,
         null,
         null,
@@ -901,6 +949,6 @@
         null
       ]
     },
-    "timestamp": 1375432879
+    "timestamp": 1375434202
   }
 }
