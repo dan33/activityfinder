@@ -14,10 +14,19 @@
 #
 
 class Activity < ActiveRecord::Base
-	belongs_to :membership
+  before_save :geocode
+	has_many :memberships
 	belongs_to :category
 	has_many :users, :through => :memberships
 	has_many :comments
 
   attr_accessible :address, :category_id, :description, :latitude, :longitude, :title
+
+  def geocode
+    result = Geocoder.search(self.address).first
+      if result.present?
+        self.latitude = result.latitude
+        self.longitude = result.longitude
+      end
+  end
 end

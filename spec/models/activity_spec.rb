@@ -16,5 +16,22 @@
 require 'spec_helper'
 
 describe Activity do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "A valid activity" do
+    before do
+      @activity = FactoryGirl.create(:activity)
+      @user = FactoryGirl.create(:user)
+      @user.activities << @activity
+
+    end
+
+    it { should have_many(:memberships) }
+    it { should belong_to(:category) }
+    it { should have_many(:users).through(:memberships) }
+    it { should have_many(:comments) }
+
+    it "should set longitude and latitude on create" do
+      expect(@activity.longitude).not_to eq(nil)
+    end
+
+  end
 end
