@@ -16,4 +16,5 @@ class Membership < ActiveRecord::Base
 
 	attr_accessible :user_id, :activity_id, :role
 	validates_presence_of :user_id, :activity_id, :role
+  validates_uniqueness_of :activity_id, :message => "you have already joined this activity", :scope => 'user_id'
 end
