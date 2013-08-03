@@ -32,13 +32,17 @@ class User < ActiveRecord::Base
 	attr_accessible :email, :name, :city, :gender, :password, :password_confirmation
 
   def geocode
-    result = Geocoder.search(self.city).first
-      if result.present?
-        self.latitude = result.latitude
-        self.longitude = result.longitude
-      else
-        self.latitude = 32.3456
-        self.longitude = 141.4346
-      end
+    #over API query limit fix
+    self.latitude = 32.3456
+    self.longitude = 141.4346
+
+    # result = Geocoder.search(self.city).first
+    #   if result.present?
+    #     self.latitude = result.latitude
+    #     self.longitude = result.longitude
+    #   else
+    #     self.latitude = 32.3456
+    #     self.longitude = 141.4346
+    #   end
   end
 end

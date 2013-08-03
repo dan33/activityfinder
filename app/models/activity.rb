@@ -28,10 +28,15 @@ class Activity < ActiveRecord::Base
   validates_presence_of :address, :category_id, :description, :title
 
   def geocode
-    result = Geocoder.search(self.address).first
-      if result.present?
-        self.latitude = result.latitude
-        self.longitude = result.longitude
-      end
+
+    #over API query limit fix
+    self.latitude = 32.3456
+    self.longitude = 141.4346
+
+    # result = Geocoder.search(self.address).first
+    #   if result.present?
+    #     self.latitude = result.latitude
+    #     self.longitude = result.longitude
+    #   end
   end
 end
