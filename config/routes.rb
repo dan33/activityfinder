@@ -27,8 +27,8 @@ ActivityFinder::Application.routes.draw do
   # resources :activities, :only => [:create]
 
   # get '/activity_id' => "activity#show" do
-  #   resources :users, :only => [:index, :show]
-  #   resources :comments, :only => [:index]
+  #  resources :users, :only => [:index, :show]
+  #  resources :comments, :only => [:index]
   # end
 
   # get '/new' => "activity#new"

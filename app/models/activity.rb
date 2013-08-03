@@ -28,7 +28,6 @@ class Activity < ActiveRecord::Base
   validates_presence_of :address, :category_id, :description, :title
 
   def geocode
-
     #over API query limit fix
     self.latitude = 32.3456
     self.longitude = 141.4346
