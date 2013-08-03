@@ -7,7 +7,7 @@ ActivityFinder::Application.routes.draw do
 
   get '/users/profile' => "users#index"
 
-
+  resources :memberships
   resources :users, :only => [:index, :show]
 
   resources :activities, :only => [:new, :create, :index, :show] do

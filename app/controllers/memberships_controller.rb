@@ -1,15 +1,13 @@
 class MembershipsController < ApplicationController
 	def create
-    @membership = Membership.new(params[:membership])
-    # @membership.user = current_user
-    # @membership.activity = Activity.find(params[:activity])
+    	@membership = Membership.new(params[:membership])
       if @membership.save
-        redirect_to [@activity]
+        redirect_to activities_path(@activity)
       else
         render :new
       end
- 	end
+	end
 
- 	def new
- 	end
+	def new
+	end
 end
