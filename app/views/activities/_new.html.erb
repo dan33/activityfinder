@@ -1,0 +1,7 @@
+<%= simple_form_for @activity do |f| %>
+	<%= f.input :title, :required => true, :autofocus => true %>
+	<%= f.input :description, :required => true %>
+	<%= f.input :address, :required => true %>
+	<%= f.input :category_id, :required => true %>
+	<%= f.submit %>
+<% end %>

@@ -47,7 +47,7 @@ describe ActivitiesController do
 
       it "should redirect to the show action" do
         expect(response.status).to eq(302)
-        expect(response).to(redirect_to(activities_path(assigns(:activity))))
+        expect(response).to(redirect_to(assigns(:activity)))
       end
 
       it "should increase the number of activities" do
