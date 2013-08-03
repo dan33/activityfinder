@@ -6,9 +6,9 @@ class ActivitiesController < ApplicationController
   def create
     @user = current_user
     @activity = Activity.new(params[:activity])
+    @user.activities << @activity
+    @activity.memberships.first.role = 'owner'
       if @activity.save
-        @user.activities << @activity
-        @activity.memberships.first.role = 'owner'
         redirect_to activities_path(@activity)
       else
         render :new
