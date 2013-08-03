@@ -9,7 +9,7 @@ class ActivitiesController < ApplicationController
     @user.activities << @activity
     @activity.memberships.first.role = 'owner'
       if @activity.save
-        redirect_to @activity
+        redirect_to :show
       else
         render :new
       end
