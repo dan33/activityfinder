@@ -17,9 +17,13 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   before_save :geocode
 
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable
-	validates_presence_of :name, :email, :city
+
+  validates_presence_of :name, :email, :city
 
 	has_many :memberships
 	has_many :activities, :through => :memberships

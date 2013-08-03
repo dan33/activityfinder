@@ -20,6 +20,9 @@ class Activity < ActiveRecord::Base
 	has_many :users, :through => :memberships
 	has_many :comments
 
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
   attr_accessible :address, :category_id, :description, :latitude, :longitude, :title
 
   validates_presence_of :address, :category_id, :description, :title

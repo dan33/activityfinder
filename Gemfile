@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 	gem 'devise'
 	gem 'simple_form'
 	gem 'geocoder'
-	gem 'friendly_id'
+	gem "friendly_id", "~> 4.0.9"
 	gem 'will_paginate'
 	gem 'haml'
 	gem 'leaflet-rails'
