@@ -4,6 +4,8 @@ describe UsersController do
 
   describe "GET #index" do
     before do
+      sign_in :user, @user
+      sign_in @user
       5.times { |i| @user = FactoryGirl.create(:user) }
     end
 

@@ -4,10 +4,15 @@ class ActivitiesController < ApplicationController
   end
 
   def create
-    @activity = Activity.create(params[:activity])
-    current_user.activities << @activity
+    @user = current_user
+    @activity = Activity.new(params[:activity])
+    @user.activities << @activity
     @activity.memberships.first.role = 'owner'
-    @activity.save
+      if @activity.save
+        redirect_to @activity
+      else
+        render :new
+      end
   end
 
   def index
