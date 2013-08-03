@@ -9,19 +9,30 @@ describe MembershipsController do
 		end
 
  		context "with valid attributes" do
-   		it "creates a new membership" do
+   		before do
    			post :create, {:membership => { :user_id => @user.id, :activity_id => @activity.id}}
+   		end
+
+   		it "creates a new membership" do
    			expect(Membership.count).to eq(1)
    		end
 
    		it "has a role of member" do
+   			expect(Membership.first.role).to eq("member")
    		end
  		end
 
  		context "with invalid attributes" do
-   		it "does not save the new contact in the database" do
+   		before do
+   			post :create, {:membership => { :user_id => nil}}
    		end
-   		it "re-renders the :new template" do
+
+   		it "it doesn't create a membership" do
+   			expect(Membership.count).to eq(0)
+   		end
+
+   		it "flashes an error message" do
+   			pending
    		end
  		end
 	end

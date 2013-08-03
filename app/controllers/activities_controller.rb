@@ -12,7 +12,7 @@ class ActivitiesController < ApplicationController
 		if @activity.save
 			@user.activities << @activity
 			@activity.memberships.first.role = 'owner'
-			binding.pry
+			# binding.pry
 			@activity.save
 			redirect_to @activity
 

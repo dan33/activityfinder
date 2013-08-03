@@ -14,5 +14,6 @@ class Membership < ActiveRecord::Base
 	belongs_to :activity
 	belongs_to :user
 
-  attr_accessible :user_id, :activity_id
+	attr_accessible :user_id, :activity_id
+	validates_presence_of :user_id, :activity_id, :role
 end
