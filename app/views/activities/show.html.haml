@@ -1,0 +1,6 @@
+%ul
+  %li= link_to(@activity.title, @activity)
+  %li= @activity.description
+  %li= @activity.address
+
+  = link_to 'Join activity', memberships_path(:user_id => @user, :activity_id => @activity), :method => :post
