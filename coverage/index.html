@@ -14,27 +14,27 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-08-03T11:05:44+10:00">2013-08-03T11:05:44+10:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-08-03T11:19:34+10:00">2013-08-03T11:19:34+10:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.47%</span></span>
+    (<span class="covered_percent"><span class="green">98.2%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.39
+         2.32
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>42</b> files in total.
-    <b>277</b> relevant lines. 
-    <span class="green"><b>270</b> lines covered</span> and
-    <span class="red"><b>7</b> lines missed </span>
+    <b>278</b> relevant lines. 
+    <span class="green"><b>273</b> lines covered</span> and
+    <span class="red"><b>5</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#2f8190eb73a348036ee9003489d21775c5a4d90d" class="src_link" title="app/controllers/activities_controller.rb">app/controllers/activities_controller.rb</a></td>
-        <td class="red strong">50.0 %</td>
-        <td>26</td>
-        <td>14</td>
-        <td>7</td>
-        <td>7</td>
-        <td>0.6</td>
+        <td class="red strong">66.67 %</td>
+        <td>27</td>
+        <td>15</td>
+        <td>10</td>
+        <td>5</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -137,7 +137,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>11.7</td>
+        <td>11.0</td>
       </tr>
       
       <tr>
@@ -177,7 +177,7 @@
         <td>15</td>
         <td>15</td>
         <td>0</td>
-        <td>11.8</td>
+        <td>11.3</td>
       </tr>
       
       <tr>
@@ -337,7 +337,7 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>17.0</td>
+        <td>16.0</td>
       </tr>
       
       <tr>
@@ -377,7 +377,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>21.0</td>
+        <td>20.0</td>
       </tr>
       
       <tr>
@@ -489,11 +489,11 @@
         <div class="source_table" id="2f8190eb73a348036ee9003489d21775c5a4d90d">
   <div class="header">
     <h3>app/controllers/activities_controller.rb</h3>
-    <h4><span class="red">50.0 %</span> covered</h4>
+    <h4><span class="red">66.67 %</span> covered</h4>
     <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
-      <span class="red"><b>7</b> lines missed.</span>
+      <b>15</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -536,20 +536,20 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
-          
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
           
           <code class="ruby">    @user = current_user</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
           
           <code class="ruby">    @activity = Activity.new(params[:activity])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
           <code class="ruby">    @user.activities &lt;&lt; @activity</code>
         </li>
@@ -557,100 +557,106 @@
         <li class="missed" data-hits="0" data-linenumber="10">
           
           
-          <code class="ruby">    @activity.memberships.first.role = 'owner'</code>
+          <code class="ruby">    @user.save</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="11">
           
           
-          <code class="ruby">      if @activity.save</code>
+          <code class="ruby">    @activity.memberships.first.role = 'owner'</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">        redirect_to :show</code>
+          <code class="ruby">      if @activity.save</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
+          
+          <code class="ruby">        redirect_to activities_path(@activity)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">      else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
+        <li class="missed" data-hits="0" data-linenumber="15">
           
           
           <code class="ruby">        render :new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="19">
+        <li class="covered" data-hits="2" data-linenumber="20">
           <span class="hits">2</span>
           
           <code class="ruby">    @activities = Activity.all</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def show</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">    @activity = Activity.find(params[:id])</code>
+          <code class="ruby">  def show</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @activity = Activity.find(params[:id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">end</code>
@@ -1112,26 +1118,26 @@
           <code class="ruby">  def geocode</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="26">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="31" data-linenumber="26">
+          <span class="hits">31</span>
           
           <code class="ruby">    result = Geocoder.search(self.address).first</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="27">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="31" data-linenumber="27">
+          <span class="hits">31</span>
           
           <code class="ruby">      if result.present?</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="28">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="31" data-linenumber="28">
+          <span class="hits">31</span>
           
           <code class="ruby">        self.latitude = result.latitude</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="29">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="31" data-linenumber="29">
+          <span class="hits">31</span>
           
           <code class="ruby">        self.longitude = result.longitude</code>
         </li>
@@ -1712,26 +1718,26 @@
           <code class="ruby">  def geocode</code>
         </li>
       
-        <li class="covered" data-hits="42" data-linenumber="31">
-          <span class="hits">42</span>
+        <li class="covered" data-hits="40" data-linenumber="31">
+          <span class="hits">40</span>
           
           <code class="ruby">    result = Geocoder.search(self.city).first</code>
         </li>
       
-        <li class="covered" data-hits="42" data-linenumber="32">
-          <span class="hits">42</span>
+        <li class="covered" data-hits="40" data-linenumber="32">
+          <span class="hits">40</span>
           
           <code class="ruby">      if result.present?</code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="33">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="38" data-linenumber="33">
+          <span class="hits">38</span>
           
           <code class="ruby">        self.latitude = result.latitude</code>
         </li>
       
-        <li class="covered" data-hits="40" data-linenumber="34">
-          <span class="hits">40</span>
+        <li class="covered" data-hits="38" data-linenumber="34">
+          <span class="hits">38</span>
           
           <code class="ruby">        self.longitude = result.longitude</code>
         </li>
@@ -5774,8 +5780,8 @@
           <code class="ruby">  factory :activity do</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="5">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="31" data-linenumber="5">
+          <span class="hits">31</span>
           
           <code class="ruby">    title {[&quot;beach running&quot;, &quot;animal photography&quot;, &quot;city walk&quot;, &quot;bush walking&quot;, &quot;architecture photography&quot;, &quot;surfing at Bondi&quot;].sample}</code>
         </li>
@@ -5786,14 +5792,14 @@
           <code class="ruby">    description &quot;Join my awesome group and we can share our interest which is great&quot;</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="7">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="31" data-linenumber="7">
+          <span class="hits">31</span>
           
           <code class="ruby">    address {[&quot;Bondi Road Medical Centre, Bondi Road, Bondi, New South Wales&quot;, &quot;Manly Ferry, Alfred Street, Sydney, New South Wales&quot;, &quot;Mosman High School, Military Road, Mosman, New South Wales&quot;].sample}</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="8">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="31" data-linenumber="8">
+          <span class="hits">31</span>
           
           <code class="ruby">    category_id {[1, 2, 3, 4, 5].sample}</code>
         </li>
@@ -6044,26 +6050,26 @@
           <code class="ruby">  factory :user do</code>
         </li>
       
-        <li class="covered" data-hits="41" data-linenumber="5">
-          <span class="hits">41</span>
+        <li class="covered" data-hits="39" data-linenumber="5">
+          <span class="hits">39</span>
           
           <code class="ruby">    name {Faker::Name.name}</code>
         </li>
       
-        <li class="covered" data-hits="41" data-linenumber="6">
-          <span class="hits">41</span>
+        <li class="covered" data-hits="39" data-linenumber="6">
+          <span class="hits">39</span>
           
           <code class="ruby">    email {Faker::Internet.email}</code>
         </li>
       
-        <li class="covered" data-hits="41" data-linenumber="7">
-          <span class="hits">41</span>
+        <li class="covered" data-hits="39" data-linenumber="7">
+          <span class="hits">39</span>
           
           <code class="ruby">    gender {[&quot;male&quot;, &quot;female&quot;].sample}</code>
         </li>
       
-        <li class="covered" data-hits="41" data-linenumber="8">
-          <span class="hits">41</span>
+        <li class="covered" data-hits="39" data-linenumber="8">
+          <span class="hits">39</span>
           
           <code class="ruby">    city {[&quot;Sydney&quot;, &quot;Melbourne&quot;, &quot;Perth&quot;, &quot;Adelaide&quot;, &quot;Brisbane&quot;].sample}</code>
         </li>

@@ -38,10 +38,9 @@ describe ActivitiesController do
   describe 'POST to #create' do
     context "activity with valid information" do
       before do
+        post :create, { :title => "volleyball", :description => "this is a test", :address => "608 harris st, ultimo" }
         @user = FactoryGirl.create(:user)
         sign_in @user
-        @activity = FactoryGirl.build(:activity)
-        @activity.save
       end
 
       it "should redirect to the show action" do
