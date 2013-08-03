@@ -16,3 +16,6 @@
 
 # ignore db config
 /config/database.yml
+
+# ignore test coverage results
+coverage
