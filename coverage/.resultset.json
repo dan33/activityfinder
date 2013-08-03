@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/andrewobrien/Sites/activityfinder/config/environment.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/andrewobrien/Sites/activityfinder/config/application.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/application.rb": [
         1,
         null,
         null,
@@ -81,7 +81,7 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/config/boot.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/boot.rb": [
         1,
         null,
         null,
@@ -89,7 +89,7 @@
         null,
         1
       ],
-      "/Users/andrewobrien/Sites/activityfinder/config/environments/test.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/environments/test.rb": [
         1,
         null,
         null,
@@ -128,7 +128,7 @@
         1,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/config/initializers/backtrace_silencers.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -137,7 +137,7 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/config/initializers/devise.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -369,23 +369,6 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/andrewobrien/Sites/activityfinder/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -402,14 +385,31 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/config/initializers/mime_types.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/config/initializers/secret_token.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -418,7 +418,7 @@
         null,
         1
       ],
-      "/Users/andrewobrien/Sites/activityfinder/config/initializers/session_store.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/session_store.rb": [
         null,
         null,
         1,
@@ -428,7 +428,7 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/config/initializers/simple_form.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/simple_form.rb": [
         null,
         1,
         null,
@@ -572,7 +572,7 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/config/initializers/wrap_parameters.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -588,7 +588,7 @@
         1,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/config/routes.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/config/routes.rb": [
         1,
         1,
         null,
@@ -598,7 +598,7 @@
         1,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/app/models/user.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/models/user.rb": [
         null,
         null,
         null,
@@ -629,10 +629,10 @@
         1,
         null,
         1,
-        40,
-        40,
-        38,
-        38,
+        45,
+        45,
+        43,
+        43,
         null,
         2,
         2,
@@ -640,50 +640,43 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/app/controllers/application_controller.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/controllers/application_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/app/helpers/application_helper.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/app/helpers/activities_helper.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/helpers/activities_helper.rb": [
         1,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/app/helpers/home_helper.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/app/helpers/users_helper.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/app/controllers/activities_controller.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/controllers/activities_controller.rb": [
         1,
         null,
         1,
         null,
         null,
         1,
+        5,
+        5,
+        5,
         2,
         2,
         2,
-<<<<<<< HEAD
-        0,
-        0,
-        0,
-        0,
-=======
-        2,
-        2,
-        2,
->>>>>>> e790d0155a13289cf1d307d34876e534aaf4697d
         null,
-        0,
+        3,
         null,
         null,
         null,
@@ -697,7 +690,7 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/app/models/activity.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/models/activity.rb": [
         null,
         null,
         null,
@@ -723,28 +716,23 @@
         1,
         null,
         1,
-<<<<<<< HEAD
-        31,
-        31,
-        31,
-        31,
-=======
-        35,
-        35,
-        35,
-        35,
->>>>>>> e790d0155a13289cf1d307d34876e534aaf4697d
+        null,
+        1,
+        33,
+        33,
+        33,
+        33,
         null,
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/app/controllers/home_controller.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/controllers/home_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/app/controllers/users_controller.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/controllers/users_controller.rb": [
         1,
         null,
         1,
@@ -757,7 +745,7 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/app/models/category.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/models/category.rb": [
         null,
         null,
         null,
@@ -774,27 +762,7 @@
         1,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/app/models/comment.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
-      "/Users/andrewobrien/Sites/activityfinder/app/models/membership.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/models/comment.rb": [
         null,
         null,
         null,
@@ -814,7 +782,27 @@
         1,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/factories/activities.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/models/membership.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/factories/activities.rb": [
         null,
         null,
         1,
@@ -827,7 +815,7 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/factories/categories.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/factories/categories.rb": [
         null,
         null,
         1,
@@ -836,7 +824,7 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/factories/comments.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/factories/comments.rb": [
         null,
         null,
         1,
@@ -847,7 +835,7 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/factories/memberships.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/factories/memberships.rb": [
         null,
         null,
         1,
@@ -855,33 +843,33 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/factories/users.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/factories/users.rb": [
         null,
         null,
         1,
         1,
-        39,
-        39,
-        39,
-        39,
+        44,
+        44,
+        44,
+        44,
         1,
-        1,
-        null,
-        null
-      ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/support/devise.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/controllers/home_controller_spec.rb": [
-        1,
-        null,
         1,
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/controllers/users_controller_spec.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/support/devise.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/controllers/home_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/controllers/users_controller_spec.rb": [
         1,
         null,
         1,
@@ -922,7 +910,7 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/helpers/activities_helper_spec.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/helpers/activities_helper_spec.rb": [
         1,
         null,
         null,
@@ -939,7 +927,7 @@
         1,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/helpers/home_helper_spec.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/helpers/home_helper_spec.rb": [
         1,
         null,
         null,
@@ -956,7 +944,7 @@
         1,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/helpers/users_helper_spec.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/helpers/users_helper_spec.rb": [
         1,
         null,
         null,
@@ -973,7 +961,7 @@
         1,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/models/activity_spec.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/models/activity_spec.rb": [
         null,
         null,
         null,
@@ -1018,7 +1006,7 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/models/category_spec.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/models/category_spec.rb": [
         null,
         null,
         null,
@@ -1045,7 +1033,7 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/models/comment_spec.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/models/comment_spec.rb": [
         null,
         null,
         null,
@@ -1076,7 +1064,7 @@
         null,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/models/membership_spec.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/models/membership_spec.rb": [
         null,
         null,
         null,
@@ -1095,7 +1083,7 @@
         1,
         null
       ],
-      "/Users/andrewobrien/Sites/activityfinder/spec/models/user_spec.rb": [
+      "/Users/danieladdington/Projects/wdi/week_7/activityfinder/spec/models/user_spec.rb": [
         null,
         null,
         null,
@@ -1191,10 +1179,6 @@
         null
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1375492774
-=======
-    "timestamp": 1375492978
->>>>>>> e790d0155a13289cf1d307d34876e534aaf4697d
+    "timestamp": 1375495087
   }
 }

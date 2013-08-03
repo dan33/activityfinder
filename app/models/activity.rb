@@ -22,6 +22,8 @@ class Activity < ActiveRecord::Base
 
   attr_accessible :address, :category_id, :description, :latitude, :longitude, :title
 
+  validates_presence_of :address, :category_id, :description, :title
+
   def geocode
     result = Geocoder.search(self.address).first
       if result.present?
