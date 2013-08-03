@@ -40,8 +40,9 @@ describe ActivitiesController do
       before do
         @user = FactoryGirl.create(:user)
         sign_in @user
-        @activity = FactoryGirl.build(:activity)
-        @activity.save
+        post :create, {:activity => { :title => "blah", :description => "excellent activity", :category_id => 5, :address => "Bondi Road Medical Centre, Bondi Road, Bondi, New South Wales"}}
+        # @activity = FactoryGirl.build(:activity)
+        # @activity.save
       end
 
       it "should redirect to the show action" do
