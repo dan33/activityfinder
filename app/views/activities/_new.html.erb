@@ -1,3 +1,8 @@
+<%= simple_form_for @activityfind do |f| %>
+ <%= f.input :address, :required => true, :autofocus => true %>
+ <%= f.submit %>
+<% end %>
+
 <%= simple_form_for @activity do |f| %>
 	<%= f.input :title, :required => true, :autofocus => true %>
 	<%= f.input :description, :required => true %>
