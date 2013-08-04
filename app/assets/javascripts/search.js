@@ -10,7 +10,7 @@ $(document).ready(function() {
    url: '/search/',
   }).done(function(data) {
    latlong = data;
-   console.log(data);
+   console.log(latlong);
   });
  });
 });
