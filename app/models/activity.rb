@@ -15,10 +15,10 @@
 
 class Activity < ActiveRecord::Base
   before_save :geocode
-	has_many :memberships
-	belongs_to :category
-	has_many :users, :through => :memberships
-	has_many :comments
+  has_many :memberships, :dependent => :destroy
+  belongs_to :category
+  has_many :users, :through => :memberships
+  has_many :comments
 
   extend FriendlyId
   friendly_id :title, use: :slugged
