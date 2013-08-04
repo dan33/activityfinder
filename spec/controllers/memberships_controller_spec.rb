@@ -10,7 +10,7 @@ describe MembershipsController do
 
  		context "with valid attributes" do
    		before do
-   			post :create, {:membership => { :user_id => @user.id, :activity_id => @activity.id}}
+   			post :create, { :user_id => @user.id, :activity_id => @activity.id}
    		end
 
    		it "creates a new membership" do
@@ -24,11 +24,11 @@ describe MembershipsController do
 
  		context "with invalid attributes" do
    		before do
-   			post :create, {:membership => { :user_id => nil}}
+   			post :create, { :user_id => nil, :activity_id => @activity.id}
    		end
 
    		it "it doesn't create a membership" do
-   			expect(Membership.count).to eq(0)
+   			expect(Membership.count).to eq(1)
    		end
 
    		it "flashes an error message" do
