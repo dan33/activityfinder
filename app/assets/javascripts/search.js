@@ -11,7 +11,6 @@ $(document).ready(function() {
     }).done(function(data) {
       var latlong = data.latlong;
       var activities = data.activities;
-      console.log(latlong);
       $('#map_float').empty();
       $('#map_float').append('<div id="map"/>');
       var map = L.map('map', {
@@ -21,10 +20,10 @@ $(document).ready(function() {
       });
 
       var process_activities = function(a) {
-        _.each(a, function () {
-          debugger;
-          L.marker(activities.latitude, activities.longitude).addTo(map)
-          .bindPopup(activities.description)
+        _.each(a, function (a) {
+         debugger;
+          L.marker([a.latitude, a.longitude]).addTo(map)
+          .bindPopup(a.description)
           .openPopup();
         });
       };
