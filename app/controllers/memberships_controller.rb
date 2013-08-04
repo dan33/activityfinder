@@ -5,7 +5,7 @@ class MembershipsController < ApplicationController
 		if @membership.save
 			redirect_to @activity
 		else
-						#render error messages partial
+			#render error messages partial
 		end
 	end
 
