@@ -38,4 +38,9 @@ class Activity < ActiveRecord::Base
     #     self.longitude = result.longitude
     #   end
   end
+
+  def is_owner
+    self.memberships.where(:role => 'owner').first.user.name
+  end
+
 end
