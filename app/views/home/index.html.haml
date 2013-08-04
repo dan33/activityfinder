@@ -1,2 +1,7 @@
-%div
-  = render :partial => 'users/show'
+%div#panel
+  - if current_user.present?
+    = render :partial => 'users/show'
+  - else
+    %p Sign up to join activities
+
+%div#map
