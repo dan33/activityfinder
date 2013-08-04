@@ -26,11 +26,13 @@ describe ActivitiesController do
 
   describe "GET #show" do
     before do
+      @user = FactoryGirl.create(:user)
       @activity = FactoryGirl.create(:activity)
+      @membership = @user.memberships.create(:activity_id => @activity.id, :role => 'owner')
     end
 
     it "renders the #show view" do
-      get :show, {:id => @activity.id}
+      get :show, { :id => @activity.id, :role => 'owner' }
       response.should render_template :show
     end
   end
