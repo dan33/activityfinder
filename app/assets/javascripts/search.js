@@ -23,20 +23,12 @@ $(document).ready(function() {
         _.each(a, function (a) {
          debugger;
           L.marker([a.latitude, a.longitude]).addTo(map)
-          .bindPopup(a.description)
+          .bindPopup('<h3>' + a.title + '</h3>' + '<br>' + a.description)
           .openPopup();
         });
       };
 
       process_activities(activities);
-
-
-
-      L.marker(latlong).addTo(map)
-        .bindPopup('A pretty CSS3 popup. <br> Easily customizable.')
-        .openPopup();
-
-      L.marker([-33.6451568, 151.2849679]).addTo(map).bindPopup('This is Church Point, CO.');
 
       var calculate_map_tiles = function() {
         n = 2 ^ zoom;
