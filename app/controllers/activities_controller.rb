@@ -26,8 +26,7 @@ class ActivitiesController < ApplicationController
   end
 
  def locate
-    @address = params[:address]
-    result = Geocoder.search(@address)
+    result = Geocoder.search(params[:address]).first
       if result.present?
         @latlong = [result.latitude, result.longitude]
         render :json => (@latlong)
