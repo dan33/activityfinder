@@ -9,10 +9,9 @@ ActivityFinder::Application.routes.draw do
 
 	resources :memberships
 
-	resources :activities, :only => [:new, :create, :index, :show] do
-		resources :users, :only => [:index, :show]
-		resources :comments, :only => [:index]
-	end
+	resources :users, :only => [:show]
+
+	resources :activities, :only => [:new, :create, :index, :show]
 
 
 	# devise_for :users

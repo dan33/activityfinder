@@ -22,6 +22,7 @@ class ActivitiesController < ApplicationController
 	def show
 		@activity = Activity.find(params[:id])
 		@owner = @activity.is_owner
+		# check to see if users are evident here
 	end
 end
 

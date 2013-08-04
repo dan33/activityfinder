@@ -2,38 +2,20 @@ require 'spec_helper'
 
 describe UsersController do
 
-	describe "GET #index" do
-		before do
-			@user = FactoryGirl.create(:user)
-			sign_in @user
-		end
-
-		describe 'as HTML' do
-			before do
-					get :index
-			end
-
-			it "should respond with a status 200" do
-				expect(response).to be_success
-				expect(response.status).to eq(200)
-			end
-
-			it "should give the users in an instance variable" do
-				expect(assigns(:users)).to be
-				expect(assigns(:users).length).to eq(1)
-				expect(assigns(:users).first.class).to eq(User)
-			end
-		end
-	end
-
 	describe "GET #show" do
 		before do
-				@user = FactoryGirl.create(:user)
+			@user = FactoryGirl.create(:user)
+			@activity = FactoryGirl.create(:activity)
+			@user.activities << @activity
 		end
 
-		it "renders the #show view" do
-				get :show, {:id => @user.id}
-				response.should render_template :show
+		# it "renders the #show view" do
+		# 	get :show, {:id => @user.id}
+		# 	response.should render_template :show
+		# end
+
+		it "should show all activities the user is a member or owner of" do
+			expect(@user.activities.count).to eq(1)
 		end
 	end
 end
