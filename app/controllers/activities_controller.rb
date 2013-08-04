@@ -29,7 +29,16 @@ class ActivitiesController < ApplicationController
     result = Geocoder.search(params[:address]).first
       if result.present?
         @latlong = [result.latitude, result.longitude]
-        render :json => (@latlong)
+        @activities = Activity.all
+        # render :json => (@latlong, @activities)
+        respond_to do |format|
+          format.json {
+              render :json => {
+                  :latlong => @latlong,
+                  :activities => @activities
+                  }
+                }
+        end
       else
         #render error message
       end
