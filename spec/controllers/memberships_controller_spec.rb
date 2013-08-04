@@ -36,6 +36,24 @@ describe MembershipsController do
 			end
 		end
 	end
+
+	describe "DELETE #destroy" do
+		before do
+			@user = FactoryGirl.create(:user)
+			sign_in @user
+			@activity = FactoryGirl.create(:activity)
+			@membership = @user.memberships.create(:activity_id => @activity.id, :role => 'owner')
+		end
+
+		it "should be able to find the current membership" do
+			@membership = @user.memberships.where(:activity_id => @activity.id, :role => 'owner')
+		end
+
+		it "should be able to delete the current membership" do
+			delete :destroy, { :id => @membership.id }
+			expect(@user.memberships.count).to eq(0)
+		end
+	end
 end
 
 # CONTROLLER
