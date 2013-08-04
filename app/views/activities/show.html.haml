@@ -6,6 +6,9 @@
 
   = link_to 'Join activity', memberships_path(:user_id => @user, :activity_id => @activity), :method => :post
 
+
+%p= "Organiser:  #{ @owner }"
+
 %ul
   %li
     %h4 Members
