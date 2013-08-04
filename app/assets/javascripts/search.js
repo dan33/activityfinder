@@ -11,7 +11,6 @@ $(document).ready(function() {
     }).done(function(data) {
       var latlong = data.latlong;
       var activities = data.activities;
-      debugger;
       console.log(latlong);
       $('#map_float').empty();
       $('#map_float').append('<div id="map"/>');
@@ -20,6 +19,19 @@ $(document).ready(function() {
         zoom: 10,
         // layers: [cities]
       });
+
+      var process_activities = function(a) {
+        _.each(a, function () {
+          debugger;
+          L.marker(activities.latitude, activities.longitude).addTo(map)
+          .bindPopup(activities.description)
+          .openPopup();
+        });
+      };
+
+      process_activities(activities);
+
+
 
       L.marker(latlong).addTo(map)
         .bindPopup('A pretty CSS3 popup. <br> Easily customizable.')
