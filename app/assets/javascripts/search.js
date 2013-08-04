@@ -1,13 +1,16 @@
-$(document).ready(function () {
- $('#search_submit').click(function () {
+$(document).ready(function() {
+ $('#search_submit').click(function() {
   var search_result = $('#search_field').val();
-  debugger;
   $.ajax({
    dataType: 'json',
+   data: {
+    'address': search_result
+   },
    type: 'POST',
    url: '/search/',
-  }).done(function () {
-   console.log(search_result);
+  }).done(function(data) {
+   latlong = data;
+   console.log(data);
   });
  });
 });
