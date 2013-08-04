@@ -23,7 +23,6 @@ class ActivitiesController < ApplicationController
 		@activity = Activity.find(params[:id])
 		@owner = @activity.is_owner
 	end
-
 end
 
 
