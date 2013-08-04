@@ -10,8 +10,8 @@ $(document).ready(function() {
   // var cities = L.layerGroup([littleton, denver, golden]);
 
   var map = L.map('map', {
-    center: new L.LatLng(-27.601902,134.46579),
-    zoom: 4,
+    center: new L.LatLng(-33.8674869, 151.2069902),
+    zoom: 10,
     // layers: [cities]
   });
   var z = 13

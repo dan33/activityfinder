@@ -13,18 +13,20 @@ $(document).ready(function() {
     console.log(latlong);
     $('#map_float').empty();
     $('#map_float').append('<div id="map"/>');
+
     var map = L.map('map', {
      center: new L.LatLng(latlong[0], latlong[1]),
-     zoom: 4,
+     zoom: 10,
      // layers: [cities]
     });
     var z = 13;
 
-    // // MARKR TEMPLATE
-    // L.marker([51.5, -0.09]).addTo(map)
-    //   .bindPopup('A pretty CSS3 popup. <br> Easily customizable.')
-    //   .openPopup();
-    // //
+    L.marker(latlong).addTo(map)
+      .bindPopup('A pretty CSS3 popup. <br> Easily customizable.')
+      .openPopup();
+
+   L.marker([-33.6451568, 151.2849679]).addTo(map).bindPopup('This is Church Point, CO.');
+
 
     var calculate_map_tiles = function() {
      n = 2 ^ zoom;
