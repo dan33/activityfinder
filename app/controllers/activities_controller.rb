@@ -25,8 +25,15 @@ class ActivitiesController < ApplicationController
     # check to see if users are evident here
   end
 
-  def locate
-
+  def locate(address)
+    result = Geocoder.search(address)
+      if result.present?
+        self.latitude = result.latitude
+        self.longitude = result.longitude
+      else
+        self.latitude = 32.3456
+        self.longitude = 141.4346
+      end
   end
 end
 
