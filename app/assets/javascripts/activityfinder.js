@@ -26,8 +26,7 @@ $(document).ready(function () {
   var process_activities = function (a) {
     _.each(a, function (a) {
       L.marker([a.latitude, a.longitude]).addTo(map)
-        .bindPopup('<h3>' + a.title + '</h3>' + '<br>' + a.description)
-        .openPopup();
+        .bindPopup('<h3>' + a.title + '</h3>' + '<br>' + a.description);
     });
   };
 
