@@ -8,33 +8,33 @@ describe MembershipsController do
 			sign_in @user
 		end
 
- 		context "with valid attributes" do
-   		before do
-   			post :create, { :user_id => @user.id, :activity_id => @activity.id}
-   		end
+		context "with valid attributes" do
+			before do
+				post :create, { :user_id => @user.id, :activity_id => @activity.id}
+			end
 
-   		it "creates a new membership" do
-   			expect(Membership.count).to eq(1)
-   		end
+			it "creates a new membership" do
+				expect(Membership.count).to eq(1)
+			end
 
-   		it "has a role of member" do
-   			expect(Membership.first.role).to eq("member")
-   		end
- 		end
+			it "has a role of member" do
+				expect(Membership.first.role).to eq("member")
+			end
+		end
 
- 		context "with invalid attributes" do
-   		before do
-   			post :create, { :user_id => nil, :activity_id => @activity.id}
-   		end
+		context "with invalid attributes" do
+			before do
+				post :create, { :user_id => nil, :activity_id => @activity.id}
+			end
 
-   		it "it doesn't create a membership" do
-   			expect(Membership.count).to eq(1)
-   		end
+			it "it doesn't create a membership" do
+				expect(Membership.count).to eq(1)
+			end
 
-   		it "flashes an error message" do
-   			pending
-   		end
- 		end
+			it "flashes an error message" do
+				pending
+			end
+		end
 	end
 end
 

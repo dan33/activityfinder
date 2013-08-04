@@ -43,8 +43,6 @@ describe ActivitiesController do
         @user = FactoryGirl.create(:user)
         sign_in @user
         post :create, {:activity => { :title => "blah", :description => "excellent activity", :category_id => 5, :address => "Bondi Road Medical Centre, Bondi Road, Bondi, New South Wales"}}
-        # @activity = FactoryGirl.build(:activity)
-        # @activity.save
       end
 
       it "should redirect to the show action" do
@@ -54,6 +52,19 @@ describe ActivitiesController do
 
       it "should increase the number of activities" do
         expect(Activity.count).to eq(1)
+      end
+    end
+  end
+
+    describe 'GET to #new' do
+      before do
+        @user = FactoryGirl.create(:user)
+        sign_in @user
+      end
+
+      it "should get the #new view" do
+        get :new
+        expect(assigns(:activity)).to be
       end
     end
 
@@ -78,4 +89,3 @@ describe ActivitiesController do
       end
     end
   end
-end
