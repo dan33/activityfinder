@@ -24,7 +24,6 @@ class ActivitiesController < ApplicationController
 		@owner = @activity.is_owner
 		# check to see if users are evident here
 	end
-
 end
 
 

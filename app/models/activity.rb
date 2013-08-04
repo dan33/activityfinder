@@ -43,4 +43,6 @@ class Activity < ActiveRecord::Base
     self.memberships.where(:role => 'owner').first.user.name
   end
 
+
+
 end
