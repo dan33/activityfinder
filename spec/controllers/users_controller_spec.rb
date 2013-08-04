@@ -14,14 +14,14 @@ describe UsersController do
 			end
 
 			it "should respond with a status 200" do
-					expect(response).to be_success
-					expect(response.status).to eq(200)
+				expect(response).to be_success
+				expect(response.status).to eq(200)
 			end
 
 			it "should give the users in an instance variable" do
-					expect(assigns(:users)).to be
-					expect(assigns(:users).length).to eq(1)
-					expect(assigns(:users).first.class).to eq(User)
+				expect(assigns(:users)).to be
+				expect(assigns(:users).length).to eq(1)
+				expect(assigns(:users).first.class).to eq(User)
 			end
 		end
 	end
