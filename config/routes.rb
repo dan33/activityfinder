@@ -5,14 +5,13 @@ ActivityFinder::Application.routes.draw do
 
 	resources :categories, :only => [:show, :index]
 
-	get '/users/profile' => "users#index"
+	get '/users/profile' => "users#profile"
 
 	resources :memberships
-	resources :users, :only => [:index, :show]
 
 	resources :activities, :only => [:new, :create, :index, :show] do
-
-	resources :comments, :only => [:index]
+		resources :users, :only => [:index, :show]
+		resources :comments, :only => [:index]
 	end
 
 
