@@ -4,7 +4,11 @@
 	%li= @activity.description
 	%li= @activity.address
 
-	= link_to 'Join activity', memberships_path(:user_id => @user, :activity_id => @activity), :method => :post
+	- if @activity.users.include?(current_user)
+		= button_to 'Leave activity', membership_path(current_user.memberships.where(:activity_id => @activity).first), :method => :delete
+	- else
+		= button_to 'Join activity', memberships_path(:user_id => @user, :activity_id => @activity), :method => :post
+
 
 
 %ul

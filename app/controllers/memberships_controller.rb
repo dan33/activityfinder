@@ -11,4 +11,12 @@ class MembershipsController < ApplicationController
 
 	def new
 	end
+
+	def destroy
+		@membership = current_user.memberships.find(params[:id])
+  		@membership.destroy
+		flash[:notice] = "Removed membership."
+    	redirect_to root_path
+	end
+
 end
