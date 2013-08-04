@@ -25,15 +25,15 @@ class ActivitiesController < ApplicationController
     # check to see if users are evident here
   end
 
-  def locate(address)
-    result = Geocoder.search(address)
+ def locate
+    @address = params[:address]
+    result = Geocoder.search(@address)
       if result.present?
-        self.latitude = result.latitude
-        self.longitude = result.longitude
+        @latlong = [result.latitude, result.longitude]
+        render :json => (@latlong)
       else
-        self.latitude = 32.3456
-        self.longitude = 141.4346
-      end
+        #render error message
+    end
   end
 end
 
