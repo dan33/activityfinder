@@ -1,23 +1,23 @@
 %ul
-	%li
-		%h4= @activity.title
-	%li= @activity.description
-	%li= @activity.address
+  %li
+    %h4= @activity.title
+  %li= @activity.description
+  %li= @activity.address
 
-	- if @activity.users.include?(current_user)
-		= button_to 'Leave activity', membership_path(current_user.memberships.where(:activity_id => @activity).first), :method => :delete
-	- else
-		= button_to 'Join activity', memberships_path(:user_id => @user, :activity_id => @activity), :method => :post
+  - if @activity.users.include?(current_user)
+    = button_to 'Leave activity', membership_path(current_user.memberships.where(:activity_id => @activity).first), :method => :delete
+  - else
+    = button_to 'Join activity', memberships_path(:user_id => @user, :activity_id => @activity), :method => :post
 
 
-
-%ul
-	%li
-		%h4 Organiser
-		= @owner
 
 %ul
-	%li
-		%h4 Members
-		- @activity.users.each do |user|
-			%li= user.name
+  %li
+    %h4 Organiser
+    = @owner
+
+%ul
+  %li
+    %h4 Members
+    - @activity.users.each do |user|
+      %li= user.name
