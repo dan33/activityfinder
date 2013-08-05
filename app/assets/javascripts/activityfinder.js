@@ -28,7 +28,7 @@ $(document).ready(function() {
     var layer_objects = _.map(layers, function(layer) {
       return layer.layer;
     });
-    console.log(layers, layer_objects);
+
     var map = L.map('map', {
       center: new L.LatLng(-33.8674869, 151.2069902),
       zoom: 10,
