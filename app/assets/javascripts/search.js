@@ -53,6 +53,8 @@ $(document).ready(function() {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
       }).addTo(map);
 
+      L.control.layers(layer_objects).addTo(map);
+
     });
   });
 });
