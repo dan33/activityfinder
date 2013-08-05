@@ -10,6 +10,7 @@ source 'https://rubygems.org'
 	gem 'haml'
 	gem 'leaflet-rails'
 	gem 'jquery-rails'
+	gem 'ancestry'
 
 group :development, :test do
 

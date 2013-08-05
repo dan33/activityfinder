@@ -13,8 +13,9 @@
 class Comment < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :activity
+  has_ancestry
 
-  attr_accessible :activity_id, :description, :user_id
+  attr_accessible :activity_id, :description, :user_id, :parent_id
 
   validates_presence_of :description, :user_id, :activity_id
 end

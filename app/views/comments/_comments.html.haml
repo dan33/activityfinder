@@ -1,3 +1,4 @@
 %h4 Comments
-- @activity.comments.each do |comment|
-  %p= comment.description
+= nested_comments @comments.arrange(:order => :created_at)
+
+
