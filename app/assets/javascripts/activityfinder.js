@@ -54,4 +54,7 @@ $(document).ready(function() {
 
     L.control.layers({}, layercake).addTo(map);
   });
+  $('button').click(function() {
+    $(this).parent().find('.reply_form').toggleClass('hidden');
+  });
 });
