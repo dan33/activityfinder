@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   before_filter :get_activity
 
   def new
-    #@comment = @activity.comments.new
+    #@comment = Comment.new(:activity_id => params[:activity_id])
   end
 
   def create

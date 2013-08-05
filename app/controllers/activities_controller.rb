@@ -26,7 +26,7 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
-    @comment = @activity.comments.new
+    @comment = Comment.new(:activity_id => params[:activity_id])
     @owner = @activity.is_owner
     # check to see if users are evident here
   end

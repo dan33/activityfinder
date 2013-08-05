@@ -2,4 +2,5 @@
   %li= current_user.name
 - current_user.activities.each do |activity|
   %li= link_to(activity.title, activity)
+  %li= pluralize(current_user.comments.count, 'comments')
 
