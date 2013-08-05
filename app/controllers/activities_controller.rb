@@ -16,11 +16,20 @@ class ActivitiesController < ApplicationController
   end
 
   def index
-    @activities = Activity.all
+    @categories = Category.all
+    cats = []
+
+    @categories.each do |category|
+      cats.push({
+          :id => category.id,
+          :title => category.title,
+          :activities => category.activities
+        })
+    end
 
     respond_to do |format|
       format.html
-      format.json { render :json => @activities }
+      format.json { render :json => cats }
     end
   end
 
