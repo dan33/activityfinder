@@ -16,6 +16,7 @@ class ActivitiesController < ApplicationController
   end
 
   def index
+    @activities = Activity.all
     @categories = Category.all
     cats = []
 
@@ -45,13 +46,22 @@ class ActivitiesController < ApplicationController
     result = Geocoder.search(params[:address]).first
       if result.present?
         @latlong = [result.latitude, result.longitude]
-        @activities = Activity.all
-        # render :json => (@latlong, @activities)
+        @categories = Category.all
+        cats = []
+
+        @categories.each do |category|
+        cats.push({
+          :id => category.id,
+          :title => category.title,
+          :activities => category.activities
+        })
+        end
+
         respond_to do |format|
           format.json {
               render :json => {
                   :latlong => @latlong,
-                  :activities => @activities
+                  :cats => cats
                   }
                 }
         end
