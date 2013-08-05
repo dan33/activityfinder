@@ -17,6 +17,10 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   before_save :geocode
 
+  attr_accessible :email, :name, :city, :gender, :password, :password_confirmation, :image, :remote_image_url
+
+  mount_uploader :image, ImageUploader
+
   extend FriendlyId
   friendly_id :name, use: :slugged
 
@@ -28,8 +32,6 @@ class User < ActiveRecord::Base
 	has_many :memberships, :dependent => :destroy
 	has_many :activities, :through => :memberships
 	has_many :comments
-
-	attr_accessible :email, :name, :city, :gender, :password, :password_confirmation
 
   def geocode
     #over API query limit fix
