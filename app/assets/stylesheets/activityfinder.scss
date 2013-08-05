@@ -1,6 +1,22 @@
 #map {
-  height: 600px;
-  width: 800px;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+}
+
+#container {
+  height: 100%;
+  width: 18%;
+  z-index: 3000;
+  position: absolute;
+  top: 2%;
+  left: 1%;
+}
+
+#user_nav {
+  z-index: 3000;
 }
 
 html, body {
@@ -8,6 +24,29 @@ html, body {
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#users_show {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+#search {
+  position: absolute;
+  top: 20%;
+  left: 4%;
+}
+
+#panel {
+  width: 18%;
+  background-color: lightgrey;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 2000;
 }
 
 .clear {
