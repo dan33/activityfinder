@@ -17,10 +17,19 @@ class ActivitiesController < ApplicationController
 
   def index
     @activities = Activity.all
+    @nightlife = Activity.where(:category_id => 1).first
+    @exercise = Activity.where(:category_id => 2).first
+    @relaxation = Activity.where(:category_id => 3).first
 
     respond_to do |format|
       format.html
-      format.json { render :json => @activities }
+      format.json { render :json => {
+        :activities => @activities,
+        :nightlife => @nightlife,
+        :exercise => @exercise,
+        :relaxation => @relaxation
+        }
+      }
     end
   end
 
