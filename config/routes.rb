@@ -3,15 +3,14 @@ ActivityFinder::Application.routes.draw do
 
 	root :to => "home#index"
 
-	resources :categories, :only => [:show, :index]
-
 	get '/users/profile' => "users#show"
 	post '/search/' => "activities#locate"
 
-	resources :memberships
-
+  resources :categories, :only => [:show, :index]
 	resources :users, :only => [:show]
+  resources :activities, :only => [:new, :create, :index, :show]
+  resources :memberships
+  resources :comments
 
-	resources :activities, :only => [:new, :create, :index, :show]
 
 end

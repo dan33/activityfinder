@@ -18,4 +18,5 @@ describe UsersController do
 			expect(@user.activities.count).to eq(1)
 		end
 	end
+
 end

@@ -15,4 +15,6 @@ class Comment < ActiveRecord::Base
 	belongs_to :activity
 
   attr_accessible :activity_id, :description, :user_id
+
+  validates_presence_of :description, :user_id, :activity_id
 end
