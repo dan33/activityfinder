@@ -59,11 +59,11 @@ class ActivitiesController < ApplicationController
 
         respond_to do |format|
           format.json {
-              render :json => {
-                  :latlong => @latlong,
-                  :cats => cats
-                  }
-                }
+            render :json => {
+              :latlong => @latlong,
+              :cats => cats
+              }
+            }
         end
       else
         #render error message

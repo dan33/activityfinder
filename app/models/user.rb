@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   before_save :geocode
 
-  attr_accessible :email, :name, :city, :gender, :password, :password_confirmation, :image, :remote_image_url
+  attr_accessible :email, :name, :city, :gender, :password, :password_confirmation, :image, :remote_image_url, :remove_image
 
   mount_uploader :image, ImageUploader
 
