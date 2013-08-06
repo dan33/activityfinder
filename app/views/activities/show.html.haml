@@ -14,6 +14,7 @@
 %h4 Members
 %ul
 - @activity.users.each do |user|
+  %li= image_tag user.image_url(:thumb).to_s
   %li= user.name
 
 %h4 Comments

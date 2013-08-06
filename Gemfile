@@ -11,6 +11,8 @@ source 'https://rubygems.org'
 	gem 'leaflet-rails'
 	gem 'jquery-rails'
 	gem 'ancestry'
+	gem 'carrierwave'
+	gem "rmagick"
 
 group :development, :test do
 
