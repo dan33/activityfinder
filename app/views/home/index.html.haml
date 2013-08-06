@@ -8,6 +8,12 @@
       %p ACTIVITIES
     %div#panelsearch
       = render 'activities/search'
+  %div#leftpanel
+    - if current_user.present?
+      = render 'users/show'
+  %div#middlepanel
+
+  %div#rightpanel
 
 
 
