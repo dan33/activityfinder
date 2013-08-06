@@ -13,4 +13,7 @@ $(document).ready(function () {
         }
     });
 
+    // $('.leaflet-control-layers').addClass("leaflet-control-layers-expanded");
+
+
 });
