@@ -1,7 +1,6 @@
 <%= simple_form_for @comment do |f| %>
   <%= f.input :description, :required => true, :label => false, :autofocus => true, :as => :text, :input_html => { placeholder: "Comment", :rows => 3, :min => 10, :maxlength => 450} %>
   <%= f.input :activity_id, :as => :hidden, :input_html => { :value => @activity.id } %>
-  <%= local_assigns.to_json %>
   <%= f.input :parent_id, :as => :hidden, :input_html => { :value => locals[:comment_parent].id }  %>
   <%= f.submit %>
 <% end %>
