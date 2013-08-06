@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+
+
 #map {
   height: 100%;
   width: 100%;
@@ -19,9 +22,16 @@
   z-index: 3000;
 }
 
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
 html, body {
   background-color: #fff;
-  font-family: Verdana, Helvetica, Arial;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  // font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
   height: 100%;
   width: 100%;
@@ -34,28 +44,78 @@ html, body {
   top: 43%;
 }
 
+#panel {
+  transition: top 1s;
+  -webkit-transition: top 1s; /* Safari */
+  width: 100%;
+  background-color: white;
+  height: 57%;
+  position: absolute;
+  top: 93%;
+  z-index: 2000;
+}
+
 #panel.panel_show {
   top: 43%;
   position: absolute;
 }
 
-#search {
+#panelsearch {
   position: absolute;
-  top: 33%;
-  right: 1%;
+  height: 12%;
+  width: 50%;
+  left: 51%;
+  top: 0.9%;
 }
 
-#panel {
-    transition: top 1s;
-  -webkit-transition: top 1s; /* Safari */
+#panelsearch input {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  border: none;
+  height: 87%;
+  width: 88%;
+  outline: none;
+  font-size: 1.3em;
+  background: transparent;
+  text-transform: uppercase;
+}
 
-  width: 100%;
-  background-color: white;
-  border: 2px solid black;
-  height: 57%;
+#search_submit {
+  margin-left: -9999px;
+}
+
+#menubar {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  height: 12.5%;
+}
+
+#menubar #panelactivities {
+  width: 25%;
+  height: 12%;
   position: absolute;
-  top: 93%;
-  z-index: 2000;
+  left: 25%;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+#menubar #panelactivities p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin-top: -0.5em;
+  position: relative;
+  text-align: center;
+  height: 100%;
+}
+
+#menubar #panelme {
+  width: 25%;
+  height: 12%;
+  position: absolute;
+  left: 0;
 }
 
 .clear {
@@ -106,3 +166,7 @@ html, body {
 .nested_comments .nested_comments .nested_comments .nested_comments {
   margin-left: 0;
 }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }

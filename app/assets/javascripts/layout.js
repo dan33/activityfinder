@@ -1,7 +1,14 @@
 $(document).ready(function () {
 
-    $('#panel').click(function () {
-        $(this).toggleClass("panel_show");
+    $('#panelactivities, #panelme').click(function () {
+        $('#panel').toggleClass("panel_show");
+    });
+
+
+    $('#panelsearch').keypress(function(e){
+    if (e.which == 13){
+        $("#search_submit").click();
+        }
     });
 
 });
