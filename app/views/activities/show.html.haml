@@ -12,30 +12,7 @@
     - if current_user.present?
       = render 'users/show'
   %div#middlepanel
-    %h4= @activity.title
-    %ul
-      %li= @activity.description
-      %li= @activity.address
-
-    - if @activity.users.include?(current_user)
-      = button_to 'Leave activity', membership_path(current_user.memberships.where(:activity_id => @activity).first), :method => :delete unless current_user.name == @owner
-      %h4 Organiser
-      = @owner
-
-      %h4 Members
-      %ul
-      - @activity.users.each do |user|
-        %li= image_tag user.image_url
-        %li= user.name
-
-      %h4 Comments
-      = render "comments/form", :locals => { :comment_parent => @comment }
-      = render "comments/comments"
-
-    - else
-      %p You need to be a member to see an activity.
-      = button_to 'Join activity', memberships_path(:user_id => @user, :activity_id => @activity), :method => :post
-
+    = render 'activities_show'
   %div#rightpanel
 
 
