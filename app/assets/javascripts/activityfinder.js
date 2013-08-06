@@ -51,9 +51,9 @@ $(document).ready(function() {
     _.each(layers, function(layer) {
       layercake[layer.title] = layer.layer;
     });
-
     L.control.layers({}, layercake).addTo(map);
   });
+
   $('button').click(function() {
     $(this).parent().find('.reply_form').toggleClass('hidden');
   });
