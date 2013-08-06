@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    $('#panel').click(function () {
-        $(this).toggleClass("panel_show");
+    $('#activities, #me').click(function () {
+        $('#panel').toggleClass("panel_show");
     });
 
 });

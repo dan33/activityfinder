@@ -1,9 +1,22 @@
-%div#panel
-  - if current_user.present?
-    = render :partial => 'users/show'
-    = render :partial => 'activities/search'
-  - else
-    %p Sign up to join activities
-
 %div#map_float
   %div#map
+
+%div#panel
+  %div#menubar
+    %div#me
+    %div#activities
+    %div#search
+      = render 'activities/search'
+
+
+
+
+
+/ - if current_user.present?
+/ = render 'users/show'
+/ - if current_user.present?
+/ - if current_user.present?
+/ /
+/ /   = render :partial => 'activities/search'
+/ - else
+/   %p Sign up to join activities
