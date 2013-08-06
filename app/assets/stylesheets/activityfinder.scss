@@ -52,14 +52,14 @@ html, body {
 
 #panelsearch {
   position: absolute;
-  height: 53px;
+  height: 12%;
   width: 50%;
   left: 51%;
 }
 
 #panelsearch input {
   border: none;
-  height: 95%;
+  height: 93%;
   width: 88%;
   outline: none;
   font-size: 1.3em;
@@ -68,12 +68,12 @@ html, body {
 #menubar {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  height: 55px;
+  height: 12.5%;
 }
 
 #menubar #panelactivities {
   width: 25%;
-  height: 53px;
+  height: 12%;
   position: absolute;
   left: 25%;
   border-left: 2px solid black;
@@ -89,7 +89,7 @@ html, body {
 
 #menubar #panelme {
   width: 25%;
-  height: 53px;
+  height: 12%;
   position: absolute;
   left: 0;
 }
