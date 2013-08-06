@@ -1,5 +1,6 @@
 class ActivitiesController < ApplicationController
   before_filter :authenticate_user!, :only => [:create, :new]
+  before_filter :authorize_user, :only => [:update]
 
   def new
     @activity = Activity.new
@@ -69,4 +70,12 @@ class ActivitiesController < ApplicationController
         #render error message
       end
    end
+
+   private
+   def authorize_user
+      @activity = Activity.find(params[:id])
+      unless current_user?(@activity.user)
+        redirect_to @activity
+      end
+    end
 end
