@@ -65,16 +65,22 @@ html, body {
   height: 12%;
   width: 50%;
   left: 51%;
+  top: 0.9%;
 }
 
 #panelsearch input {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   border: none;
-  height: 93%;
+  height: 87%;
   width: 88%;
   outline: none;
   font-size: 1.3em;
+  background: transparent;
+}
+
+#search_submit {
+  margin-left: -9999px;
 }
 
 #menubar {
@@ -95,10 +101,13 @@ html, body {
 #menubar #panelactivities p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin-top: -0.5em;
+  position: relative;
   text-align: center;
-  text-align: center;
-  vertical-align: middle;
-  padding-top: 5%;
+  height: 100%;
 }
 
 #menubar #panelme {
