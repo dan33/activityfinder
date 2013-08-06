@@ -41,12 +41,10 @@ html, body {
 #users_show {
   position: absolute;
   left: 5%;
-  top: 43%;
+  top: 5%;
 }
 
 #panel {
-  transition: top 1s;
-  -webkit-transition: top 1s; /* Safari */
   width: 100%;
   background-color: white;
   height: 57%;
@@ -116,6 +114,23 @@ html, body {
   height: 12%;
   position: absolute;
   left: 0;
+}
+
+#leftpanel {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: 12.5%;
+  border: 2px solid white;
+}
+
+#middlepanel {
+  width: 25%;
+  height: 100%;
+  left: 25%;
+  position: absolute;
+  top: 12.5%;
+  border: 2px solid white;
 }
 
 .clear {

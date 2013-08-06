@@ -1,7 +1,9 @@
 $(document).ready(function () {
 
+    if (window.location.pathname != "/" ) { $('#panel').addClass("panel_show", 0 ) };
+
     $('#panelactivities, #panelme').click(function () {
-        $('#panel').toggleClass("panel_show");
+        $('#panel').toggleClass("panel_show", 400 );
     });
 
 
