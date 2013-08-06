@@ -50,14 +50,14 @@ html, body {
   position: absolute;
 }
 
-#search {
+#panelsearch {
   position: absolute;
   height: 53px;
   width: 50%;
   left: 51%;
 }
 
-#search input {
+#panelsearch input {
   border: none;
   height: 95%;
   width: 88%;
@@ -71,7 +71,7 @@ html, body {
   height: 55px;
 }
 
-#menubar #activities {
+#menubar #panelactivities {
   width: 25%;
   height: 53px;
   position: absolute;
@@ -80,7 +80,14 @@ html, body {
   border-right: 2px solid black;
 }
 
-#menubar #me {
+#menubar #panelactivities p {
+  text-align: center;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 5%;
+}
+
+#menubar #panelme {
   width: 25%;
   height: 53px;
   position: absolute;
