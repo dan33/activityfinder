@@ -1,27 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
-
 p {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-}
+  font-weight: 400; }
 
 li {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-}
+  font-weight: 400; }
 
 a {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-}
+  font-weight: 400; }
 
 #map {
   height: 100%;
   width: 100%;
   z-index: 0;
   position: absolute;
-  top: 0;
-}
+  top: 0; }
 
 #container {
   height: 100%;
@@ -29,34 +24,28 @@ a {
   z-index: 3000;
   position: absolute;
   top: 2%;
-  left: 1%;
-}
+  left: 1%; }
 
 #user_nav {
-  z-index: 3000;
-}
+  z-index: 3000; }
 
 html {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-}
+  font-weight: 400; }
 
 html, body {
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  // font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
   height: 100%;
   width: 100%;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 #users_show {
   position: absolute;
   left: 5%;
-  top: 5%;
-}
+  top: 5%; }
 
 #panel {
   width: 100%;
@@ -64,21 +53,18 @@ html, body {
   height: 57%;
   position: absolute;
   top: 93%;
-  z-index: 2000;
-}
+  z-index: 2000; }
 
 #panel.panel_show {
   top: 43%;
-  position: absolute;
-}
+  position: absolute; }
 
 #panelsearch {
   position: absolute;
   height: 12%;
   width: 50%;
   left: 51%;
-  top: 0.9%;
-}
+  top: 0.9%; }
 
 #panelsearch input {
   font-family: 'Open Sans', sans-serif;
@@ -89,18 +75,15 @@ html, body {
   outline: none;
   font-size: 1.3em;
   background: transparent;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 #search_submit {
-  margin-left: -9999px;
-}
+  margin-left: -9999px; }
 
 #menubar {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  height: 12.5%;
-}
+  height: 12.5%; }
 
 #menubar #panelactivities {
   width: 25%;
@@ -108,8 +91,7 @@ html, body {
   position: absolute;
   left: 25%;
   border-left: 2px solid black;
-  border-right: 2px solid black;
-}
+  border-right: 2px solid black; }
 
 #menubar #panelactivities p {
   font-family: 'Open Sans', sans-serif;
@@ -120,23 +102,20 @@ html, body {
   margin-top: -0.5em;
   position: relative;
   text-align: center;
-  height: 100%;
-}
+  height: 100%; }
 
 #menubar #panelme {
   width: 25%;
   height: 12%;
   position: absolute;
-  left: 0;
-}
+  left: 0; }
 
 #leftpanel {
   width: 25%;
   height: 100%;
   position: absolute;
   top: 12.5%;
-  border: 2px solid white;
-}
+  border: 2px solid white; }
 
 #middlepanel {
   width: 25%;
@@ -144,14 +123,12 @@ html, body {
   left: 25%;
   position: absolute;
   top: 12.5%;
-  border: 2px solid white;
-}
+  border: 2px solid white; }
 
 .clear {
   clear: both;
   height: 0;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .comment {
   margin: 8px 0;
@@ -159,42 +136,26 @@ html, body {
   border: solid 1px #999;
   width: 300px;
   border-radius: 12px;
-  background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(0, #CCC),
-      color-stop(1, #F5F5F5)
-  );
-  background-image: -moz-linear-gradient(
-      center bottom,
-      #CCC 0%,
-      #F5F5F5 100%
-  );
-}
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #cccccc), color-stop(1, whitesmoke));
+  background-image: -moz-linear-gradient(center bottom, #cccccc 0%, whitesmoke 100%); }
 
 .hidden {
-  display: none;
-}
+  display: none; }
 
 .comment .description a {
   color: #000;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .comment .created_at {
   color: #555;
   font-size: 12px;
-  float: right;
-}
+  float: right; }
 
 .nested_comments {
-  margin-left: 30px;
-}
+  margin-left: 30px; }
 
 .nested_comments .nested_comments .nested_comments .nested_comments {
-  margin-left: 0;
-}
+  margin-left: 0; }
 
 #modal {
   width: 500px;
@@ -205,34 +166,29 @@ html, body {
   top: 50%;
   margin-top: -250px;
   background: white;
-  margin-left: -250px;
-}
+  margin-left: -250px; }
 
 .login {
   position: absolute;
   width: 245px;
   height: 50px;
   left: 0;
-  bottom: 0;
-}
+  bottom: 0; }
 
 .login:hover {
   background: black;
-  color: white;
-}
+  color: white; }
 
 .signup {
   position: absolute;
   width: 245px;
   height: 50px;
   right: 0;
-  bottom: 0;
-}
+  bottom: 0; }
 
 .signup:hover {
   background: black;
-  color: white;
-}
+  color: white; }
 
 .log_in {
   width: 500px;
@@ -243,22 +199,19 @@ html, body {
   top: 50%;
   margin-top: -250px;
   background: white;
-  margin-left: -250px;
-}
+  margin-left: -250px; }
 
 .login h2 {
   line-height: 50px;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  font-size: 20px;
-}
+  font-size: 20px; }
 
 .signup h2 {
   line-height: 50px;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  font-size: 20px;
-}
+  font-size: 20px; }
 
 .sign_up {
   width: 500px;
@@ -269,8 +222,7 @@ html, body {
   top: 50%;
   margin-top: -250px;
   background: white;
-  margin-left: -250px;
-}
+  margin-left: -250px; }
 
 .block_out {
   height: 100%;
@@ -278,79 +230,69 @@ html, body {
   z-index: 30000;
   background: black;
   opacity: 0.4;
-  position: absolute;
-}
+  position: absolute; }
 
 #modal {
   padding: 38px;
-  border: 5px solid black;
-}
+  border: 5px solid black; }
 
 #modal h1 {
   font-size: 2em;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
-  text-align: center;
-}
+  text-align: center; }
 
 .log_in {
   padding: 38px;
-  border: 5px solid black;
-}
+  border: 5px solid black; }
 
 .log_in h2 {
   font-size: 2em;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
-  text-align: center;
-}
+  text-align: center; }
 
 .sign_up {
   padding: 38px;
-  border: 5px solid black;
-}
+  border: 5px solid black; }
 
 .sign_up h2 {
   font-size: 2em;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
-  text-align: center;
-}
+  text-align: center; }
 
 #modal p {
   line-height: 1.7em;
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9em;
-  text-align: justify;
-}
+  text-align: justify; }
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
- }
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 body .leaflet-control-zoom,
 body .leaflet-control-layers {
-  border: none;
-  }
+  border: none; }
+
 body .leaflet-control-layers-expanded {
-    padding: 6px 10px 6px 6px;
-    color: #333;
-    background: white;
-    width: 200px;
-    height: 200px;
+  padding: 6px 10px 6px 6px;
+  color: #333;
+  background: white;
+  width: 200px;
+  height: 200px; }
 
-    }
 body .leaflet-control-layers-selector {
-    margin-top: 2px;
-    position: relative;
-    top: 1px;
-    }
-body .leaflet-control-layers label {
-    display: block;
-    }
-body .leaflet-control-layers-separator {
-    height: 0;
-    border-top: 1px solid #ddd;
-    margin: 5px -10px 5px -6px;
-    }
+  margin-top: 2px;
+  position: relative;
+  top: 1px; }
 
+body .leaflet-control-layers label {
+  display: block; }
+
+body .leaflet-control-layers-separator {
+  height: 0;
+  border-top: 1px solid #ddd;
+  margin: 5px -10px 5px -6px; }

@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ActivityFinder</title>
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
+<head>
+<title>ActivityFinder</title>
+<%= stylesheet_link_tag    "application", :media => "all" %>
+<%= javascript_include_tag "application" %>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script>
+<%= csrf_meta_tags %>
+</head>
+<body>
 
-      <div id="user_nav">
-        <%= render :partial => 'layouts/intellinav' %>
-      </div>
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, id: "flash_#{name}" %>
-      <% end %>
+	<% if user_signed_in? %>
+	<% else %>
+		<div class="block_out">
+		</div>
 
-    <%= render :partial => 'activities/all', :locals => {:activities => @activities } %>
+		<div id="modal">
+			<h1>Welcome to Something!</h1>
+			<br><br>
+			<p>
+			Based on what it is called, you are probably thinking that this is relatively undefined.  And, you couldn't be more correct!  It's a broken egg shell, but you can be damned sure about the fact that all the King's Horses and all the King's Men can fix this shit.
+			</p>
+			<br>
+			<p>
+			They are tremendously hard working buggers.  They don't give a fuck about themselves and that is why I trust them.  Nothing better than someone who is self-deprecating...
+			</p>
+			<br>
+			<p>
+			Please, shoot me in the leg.  Rip me to shreds.  I want to feel the burn.  Cold metal tickling my marrow.  I want to be left bleeding in the forest by the end of tonight.
+			</p>
+			<br>
+			<div class="login">
+				<h2>LOG IN</h2>
+			</div>
+			<div class="signup">
+				<h2>SIGN UP</h2>
+			</div>
+		</div>
 
-    <%= yield %>
-  </body>
+		<div class="log_in hidden">
+			<%= render :partial => 'devise/sessions/new' %>
+		</div>
+
+		<div class="sign_up hidden">
+			<%= render :partial => 'devise/registrations/new' %>
+		</div>
+	<% end %>
+
+	<div id="user_nav">
+		<%= render :partial => 'layouts/intellinav' %>
+	</div>
+
+	<% flash.each do |name, msg| %>
+		<%= content_tag :div, msg, id: "flash_#{name}" %>
+	<% end %>
+
+	<%= render :partial => 'activities/all', :locals => {:activities => @activities } %>
+
+	<%= yield %>
+</body>
 </html>
