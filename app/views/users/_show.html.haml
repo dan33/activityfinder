@@ -1,7 +1,6 @@
-%div#users_show
-  %ul
-    %li= current_user.name
-  - current_user.activities.each do |activity|
-    %li= link_to(activity.title, activity)
-    %li= pluralize(activity.comments.count, 'comments')
+%ul
+  %li= current_user.name
+- current_user.activities.each do |activity|
+  %li= link_to(activity.title, activity)
+  %li= pluralize(activity.comments.count, 'comments')
 
