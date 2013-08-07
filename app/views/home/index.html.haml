@@ -1,19 +1,20 @@
 %div#map_float
   %div#map
 
-%div#panel
-  %div#menubar
-    %div#panelme
-    %div#panelactivities
-      %p ACTIVITIES
-    %div#panelsearch
-      = render 'activities/search'
-  %div#leftpanel
-    - if current_user.present?
-      = render 'users/show'
-  %div#middlepanel
+%div#container
+  %div#profilepic
+    %div#button1
+    %div#button2
 
-  %div#rightpanel
+
+/ %div#panelsearch
+/ = render 'activities/search'
+/ %div#leftpanel
+/ - if current_user.present?
+/ = render 'users/show'
+/ %div#middlepanel
+
+/ %div#rightpanel
 
 
 

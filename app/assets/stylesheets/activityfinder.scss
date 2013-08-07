@@ -200,13 +200,22 @@ html, body {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
+
+
+body .leaflet-control-container {
+  width: 200px;
+  position: absolute;
+  right: 0;
+}
+
 body .leaflet-right {
-right: 4%;
+  right: 40px;
 }
 
 body .leaflet-left {
-left: 95%;
+  left: 145px;
 }
+
 
 body .leaflet-control-zoom,
 body .leaflet-control-layers {
