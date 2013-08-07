@@ -66,6 +66,14 @@ a {
   background: white;
 }
 
+#button2 p {
+  line-height: 58.5px;
+  font-size: 1.3em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
 #button2 {
   display: inline-block;
   float: left;
@@ -76,13 +84,7 @@ a {
   background: white;
 }
 
-#button2 p {
-  line-height: 58.5px;
-  font-size: 1.3em;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  text-align: center;
-}
+
 
 .hidden {
   display: none;
