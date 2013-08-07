@@ -200,6 +200,14 @@ html, body {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
+body .leaflet-right {
+right: 4%;
+}
+
+body .leaflet-left {
+left: 95%;
+}
+
 body .leaflet-control-zoom,
 body .leaflet-control-layers {
   border: none;
