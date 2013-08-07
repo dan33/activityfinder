@@ -1,19 +1,39 @@
 %div#map_float
   %div#map
 
+%div#container
+  %div#profilepic
+    = image_tag(current_user.image, :id => 'ppic')
+  %div#buttons
+    %div#button1
+      -if current_user.present?
+        = link_to("Profile", "#")
+    %div#button2
 %div#panel
-  %div#menubar
-    %div#panelme
-    %div#panelactivities
-      %p ACTIVITIES
-    %div#panelsearch
-      = render 'activities/search'
-  %div#leftpanel
-    - if current_user.present?
-      = render 'users/show'
-  %div#middlepanel
+  - if current_user.present?
     = render 'activities_show'
-  %div#rightpanel
+
+
+%div#search
+  = render 'activities/search'
+
+
+
+
+
+/ %div#panel
+/   %div#menubar
+/     %div#panelme
+/     %div#panelactivities
+/       %p ACTIVITIES
+/     %div#panelsearch
+/       = render 'activities/search'
+/   %div#leftpanel
+/     - if current_user.present?
+/       = render 'users/show'
+/   %div#middlepanel
+
+/   %div#rightpanel
 
 
 

@@ -25,7 +25,8 @@ class ActivitiesController < ApplicationController
       cats.push({
           :id => category.id,
           :title => category.title,
-          :activities => category.activities
+          :activities => category.activities,
+          :image => category.image.url
         })
     end
 
@@ -44,7 +45,6 @@ class ActivitiesController < ApplicationController
   end
 
  def locate
-    binding.pry
     result = Geocoder.search(params[:address]).first
       if result.present?
         @latlong = [result.latitude, result.longitude]
@@ -56,6 +56,7 @@ class ActivitiesController < ApplicationController
           :id => category.id,
           :title => category.title,
           :activities => category.activities
+
         })
         end
 

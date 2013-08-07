@@ -8,9 +8,9 @@ $(document).ready(function() {
         $('#panel').toggleClass("panel_show", 400);
     });
 
-    $('#panelsearch').keypress(function(e) {
-        if (e.which == 13) {
-            $("#search_submit").click();
+    $('#search').keypress(function(e){
+    if (e.which == 13){
+        $("#search_submit").click();
         }
     });
 

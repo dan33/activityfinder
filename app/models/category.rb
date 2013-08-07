@@ -12,7 +12,9 @@
 class Category < ActiveRecord::Base
   	has_many :activities
 
-  	attr_accessible :title
+  	attr_accessible :title, :image, :remove_image
+
+    mount_uploader :image, ImageUploader
 
     extend FriendlyId
     friendly_id :title, use: :slugged
