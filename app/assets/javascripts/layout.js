@@ -14,6 +14,10 @@ $(document).ready(function() {
         }
     });
 
+    // $('.activity').hover(function () {
+    //     $(this).addClass('white');
+    // });
+
     $('#button2').click(function() {
         $('#panel').toggle( "blind" );
     });

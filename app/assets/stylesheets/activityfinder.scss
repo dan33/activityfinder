@@ -13,6 +13,7 @@ li {
 a {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  color: black;
 }
 
 #map {
@@ -58,7 +59,7 @@ a {
   height: 120px;
 }
 
-#buttons #button1 {
+#button1 {
   display: inline-block;
   float: left;
   height: 58.5px;
@@ -67,7 +68,7 @@ a {
   background: white;
 }
 
-#buttons #button2 p {
+#button2 p {
   line-height: 58.5px;
   font-size: 1.3em;
   font-family: 'Open Sans', sans-serif;
@@ -90,6 +91,11 @@ a {
   color:white;
 }
 
+#button1:hover {
+  background:black;
+}
+
+
 .hidden {
   display: none;
 }
@@ -104,6 +110,34 @@ a {
   max-height: 800px;
   overflow: auto;
   background: white;
+  border: 5px solid black;
+}
+
+.white {
+  color: white;
+}
+
+.activity:hover {
+  color: white;
+  background: black;
+}
+
+.activity h1 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.activity a {
+  text-decoration: none;
+}
+
+#panel p {
+  font-size: 1em;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 10px;
 }
 
 #user_nav {
@@ -185,6 +219,22 @@ html, body {
   position: relative;
   text-align: center;
   height: 100%;
+}
+
+#panel {
+
+}
+
+#panel textarea {
+  width: 240px;
+}
+
+.panel_show h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px;
 }
 
 .clear {
