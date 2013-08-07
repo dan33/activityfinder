@@ -7,7 +7,7 @@ $(document).ready(function () {
     });
 
 
-    $('#panelsearch').keypress(function(e){
+    $('#search').keypress(function(e){
     if (e.which == 13){
         $("#search_submit").click();
         }
