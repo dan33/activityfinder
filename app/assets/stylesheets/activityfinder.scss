@@ -22,6 +22,7 @@ a {
   z-index: 0;
   position: absolute;
   top: 0;
+  border: 15px solid white;
 }
 
 #container {
@@ -124,6 +125,10 @@ a {
   border: 5px solid black;
 }
 
+#panel a {
+  text-decoration: none;
+}
+
 .white {
   color: white;
 }
@@ -133,11 +138,21 @@ a {
   background: black;
 }
 
+.activity:hover a {
+  text-decoration: none;
+  color: white;
+}
+
 .activity h1 {
   font-size: 1.4em;
   text-transform: uppercase;
   text-align: center;
   padding-top: 15px;
+  text-decoration: none;
+}
+
+.activity p {
+  text-decoration: none;
 }
 
 .activity a {
@@ -186,8 +201,8 @@ html, body {
   position: absolute;
   height: 58.5px;
   width: 35%;
-  bottom: 2%;
-  right: 1%;
+  bottom: 30px;
+  right: 30px;
   z-index: 3000;
   border: 5px solid black;
   background: white;
