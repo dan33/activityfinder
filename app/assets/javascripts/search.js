@@ -9,7 +9,6 @@ $(document).ready(function() {
       type: 'POST',
       url: '/search/',
     }).done(function(data) {
-      debugger;
       var latlong = data.latlong;
       var layers = [];
       window.all_pins = [];
