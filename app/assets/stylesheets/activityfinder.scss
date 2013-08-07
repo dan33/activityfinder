@@ -45,6 +45,11 @@ a {
   width: 120px;
 }
 
+#actuserpic {
+  height: 30px;
+  width: 30px;
+}
+
 #buttons {
   position: relative;
   float: right;
@@ -76,7 +81,10 @@ a {
   left: 30px;
   top: 178px;
   width: 293px;
-  height: 500px;
+  height: auto;
+  min-height: 100px;
+  max-height: 800px;
+  overflow: auto;
   opacity: 0.8;
   background: white;
 }
