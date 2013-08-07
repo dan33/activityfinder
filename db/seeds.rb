@@ -3,7 +3,7 @@ Category.destroy_all
 Activity.destroy_all
 Membership.destroy_all
 
-u1 = User.create(:name => 'Jack Jeffress', :email => 'jack@gmail.com', :gender => 'male', :password => 'jackjeffress', :password_confirmation => 'jackjeffress', :city => 'Sydney, Australia', :image => "http://www.ozanimals.com/image/albums/australia/Mammal/normal_200511020010.jpg")
+u1 = User.create(:name => 'Jack Jeffress', :email => 'jack@gmail.com', :gender => 'male', :password => 'jackjeffress', :password_confirmation => 'jackjeffress', :city => 'Sydney, Australia')
 u2 = User.create(:name => 'Dan Addington', :email => 'dan@gmail.com', :gender => 'male', :password => 'danaddington', :password_confirmation => 'danaddington', :city => 'Sydney, Australia')
 u3 = User.create(:name => 'Andrew OBrien', :email => 'andrew@gmail.com', :gender => 'male', :password => 'andrewobrien', :password_confirmation => 'andrewobrien', :city => 'Sydney, Australia')
 
