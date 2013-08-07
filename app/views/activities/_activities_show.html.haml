@@ -8,8 +8,9 @@
   %p= @owner
 
   %h4 Members
-  - @activity.users.each do |user|
-    = image_tag user.image_url, :id => "actuserpic", :title => user.name
+  %div.member_photos
+    - @activity.users.each do |user|
+      = image_tag user.image_url, :id => "actuserpic", :title => user.name
 
   %h4 Comments
   = render "comments/form", :locals => { :comment_parent => @comment }

@@ -44,7 +44,7 @@ a {
 #ppic {
   height: 120px;
   width: 120px;
-  border: 4.5px solid white;
+  border: 5px solid black;
 }
 
 #actuserpic {
@@ -66,13 +66,22 @@ a {
   width: 170px;
   margin-left: 3px;
   background: white;
+  border: 5px solid black;
+}
+
+#button1 p {
+  line-height: 48.5px;
+  font-size: 1.3em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  text-align: center;
 }
 
 #button2 p {
-  line-height: 58.5px;
+  line-height: 48.5px;
   font-size: 1.3em;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
+  font-weight: 800;
   text-align: center;
 }
 
@@ -83,6 +92,7 @@ a {
   margin-left: 3px;
   height: 58.5px;
   width: 170px;
+  border: 5px solid black;
   background: white;
 }
 
@@ -93,6 +103,7 @@ a {
 
 #button1:hover {
   background:black;
+  color: white;
 }
 
 
@@ -166,6 +177,11 @@ html, body {
   top: 5%;
 }
 
+.member_photos {
+  width: 100px;
+  margin-left: 90.5px;
+}
+
 #search {
   position: absolute;
   height: 58.5px;
@@ -173,6 +189,7 @@ html, body {
   bottom: 2%;
   right: 1%;
   z-index: 3000;
+  border: 5px solid black;
   background: white;
   opacity: 0.8;
 }
@@ -209,6 +226,11 @@ html, body {
   border-right: 2px solid black;
 }
 
+form input {
+  width: 150px;
+  margin-left: 67.5px;
+}
+
 #menubar #panelactivities p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -226,7 +248,13 @@ html, body {
 }
 
 #panel textarea {
-  width: 240px;
+  width: 243px;
+  min-height: 50px;
+  max-height: 100px;
+  height: auto;
+  border-bottom: 1px solid black;
+  margin-left: 20px;
+  resize: none;
 }
 
 .panel_show h4 {
