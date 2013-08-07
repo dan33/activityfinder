@@ -13,6 +13,7 @@ li {
 a {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  color: black;
 }
 
 #map {
@@ -43,7 +44,7 @@ a {
 #ppic {
   height: 120px;
   width: 120px;
-  border: 4.5px solid white;
+  border: 5px solid black;
 }
 
 #actuserpic {
@@ -58,20 +59,29 @@ a {
   height: 120px;
 }
 
-#buttons #button1 {
+#button1 {
   display: inline-block;
   float: left;
   height: 58.5px;
   width: 170px;
   margin-left: 3px;
   background: white;
+  border: 5px solid black;
 }
 
-#buttons #button2 p {
-  line-height: 58.5px;
+#button1 p {
+  line-height: 48.5px;
   font-size: 1.3em;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
+  font-weight: 800;
+  text-align: center;
+}
+
+#button2 p {
+  line-height: 48.5px;
+  font-size: 1.3em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
   text-align: center;
 }
 
@@ -82,6 +92,7 @@ a {
   margin-left: 3px;
   height: 58.5px;
   width: 170px;
+  border: 5px solid black;
   background: white;
 }
 
@@ -89,6 +100,12 @@ a {
   background:black;
   color:white;
 }
+
+#button1:hover {
+  background:black;
+  color: white;
+}
+
 
 .hidden {
   display: none;
@@ -104,6 +121,34 @@ a {
   max-height: 800px;
   overflow: auto;
   background: white;
+  border: 5px solid black;
+}
+
+.white {
+  color: white;
+}
+
+.activity:hover {
+  color: white;
+  background: black;
+}
+
+.activity h1 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.activity a {
+  text-decoration: none;
+}
+
+#panel p {
+  font-size: 1em;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 10px;
 }
 
 #user_nav {
@@ -132,6 +177,11 @@ html, body {
   top: 5%;
 }
 
+.member_photos {
+  width: 100px;
+  margin-left: 90.5px;
+}
+
 #search {
   position: absolute;
   height: 58.5px;
@@ -139,6 +189,7 @@ html, body {
   bottom: 2%;
   right: 1%;
   z-index: 3000;
+  border: 5px solid black;
   background: white;
   opacity: 0.8;
 }
@@ -175,6 +226,11 @@ html, body {
   border-right: 2px solid black;
 }
 
+form input {
+  width: 150px;
+  margin-left: 67.5px;
+}
+
 #menubar #panelactivities p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -185,6 +241,28 @@ html, body {
   position: relative;
   text-align: center;
   height: 100%;
+}
+
+#panel {
+
+}
+
+#panel textarea {
+  width: 243px;
+  min-height: 50px;
+  max-height: 100px;
+  height: auto;
+  border-bottom: 1px solid black;
+  margin-left: 20px;
+  resize: none;
+}
+
+.panel_show h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px;
 }
 
 .clear {

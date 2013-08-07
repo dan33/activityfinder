@@ -6,9 +6,11 @@
     = image_tag(current_user.image, :id => 'ppic')
   %div#buttons
     %div#button1
+      -if current_user.present?
+        %p CREATE ACTIVITY
     %div#button2
       -if current_user.present?
-        %p Profile
+        %p PROFILE
 %div#panel
   - if current_user.present?
     = render 'activities_show'
