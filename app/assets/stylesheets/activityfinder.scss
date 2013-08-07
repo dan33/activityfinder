@@ -57,7 +57,7 @@ a {
   height: 120px;
 }
 
-#button1 {
+#buttons #button1 {
   display: inline-block;
   float: left;
   height: 58.5px;
@@ -66,7 +66,7 @@ a {
   background: white;
 }
 
-#button2 p {
+#buttons #button2 p {
   line-height: 58.5px;
   font-size: 1.3em;
   font-family: 'Open Sans', sans-serif;
@@ -83,8 +83,6 @@ a {
   width: 170px;
   background: white;
 }
-
-
 
 .hidden {
   display: none;
@@ -115,7 +113,7 @@ html, body {
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  // font-family: Verdana, Helvetica, Arial;
+  font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
   height: 100%;
   width: 100%;
@@ -361,8 +359,10 @@ html, body {
 }
 
 *, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
- }
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 body .leaflet-bottom {
   display: none;
@@ -390,30 +390,31 @@ body .leaflet-left {
   left: 145px;
 }
 
-
 body .leaflet-control-zoom,
 body .leaflet-control-layers {
   border: none;
-  }
+}
+
 body .leaflet-control-layers-expanded {
-    padding: 6px 10px 6px 6px;
-    color: #333;
-    background: white;
-    width: 200px;
-    height: 200px;
+  padding: 6px 10px 6px 6px;
+  color: #333;
+  background: white;
+  width: 200px;
+  height: 200px;
+}
 
-    }
 body .leaflet-control-layers-selector {
-    margin-top: 2px;
-    position: relative;
-    top: 1px;
-    }
-body .leaflet-control-layers label {
-    display: block;
-    }
-body .leaflet-control-layers-separator {
-    height: 0;
-    border-top: 1px solid #ddd;
-    margin: 5px -10px 5px -6px;
-    }
+  margin-top: 2px;
+  position: relative;
+  top: 1px;
+}
 
+body .leaflet-control-layers label {
+  display: block;
+}
+
+body .leaflet-control-layers-separator {
+  height: 0;
+  border-top: 1px solid #ddd;
+  margin: 5px -10px 5px -6px;
+}
