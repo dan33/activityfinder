@@ -56,7 +56,7 @@ class ActivitiesController < ApplicationController
           :id => category.id,
           :title => category.title,
           :activities => category.activities
-          :image => category.image.url
+
         })
         end
 
