@@ -14,19 +14,32 @@ $(document).ready(function() {
       window.all_pins = [];
 
       var process_category = function(c) {
-        var pins = _.map(c.activities, process_pin);
-        layers.push({
-          id: c.id,
-          title: c.title,
-          layer: L.layerGroup(pins)
-        });
-      };
+      var pins = _.map(c.activities, function(pin) {
+        pin.image = c.image;
+        return process_pin(pin);
+      });
+
+      layers.push({
+        id: c.id,
+        title: c.title,
+        layer: L.layerGroup(pins)
+      });
+    };
 
       var process_pin = function(activity) {
-        var pin = L.marker([activity.latitude, activity.longitude]).bindPopup('<h3>' + activity.title + '</h3>' + '<br>' + activity.description);
-        all_pins.push(pin);
-        return pin;
-      };
+      var greenIcon = L.icon({
+        iconUrl: activity.image,
+        shadowUrl: '/assets/leaf-shadow.png',
+        iconSize:     [38, 95], // size of the icon
+        shadowSize:   [50, 64], // size of the shadow
+        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+        shadowAnchor: [4, 62],  // the same for the shadow
+        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+      });
+      var pin = L.marker([activity.latitude, activity.longitude], {icon: greenIcon }).bindPopup('<h3>' + activity.title + '</h3>' + '<br>' + activity.description);
+      all_pins.push(pin);
+      return pin;
+    };
 
       _.each(data.cats, process_category);
 

@@ -32,6 +32,7 @@ describe User do
 			@user2 = FactoryGirl.create(:user)
 			@user = FactoryGirl.create(:user)
 			@activity = FactoryGirl.create(:activity)
+			@category = FactoryGirl.create(:category)
 			#@membership = Membership.create(:user_id => @user.id, :activity_id => @activity.id)
 		end
 
@@ -58,7 +59,10 @@ describe User do
 		end
 
 		it "should be a creator if they create an activity" do
-			pending #expect(@user.memberships.first.role).to eq('owner')
+			@user2.activities << @activity
+			@activity.save
+			@user2.reload
+			expect(@user2.memberships.last.role).to eq('owner')
 		end
 
 		it "should be a member if join an activity" do
