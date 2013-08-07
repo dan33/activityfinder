@@ -20,33 +20,19 @@ class ActivitiesController < ApplicationController
     @activities = Activity.all
     @categories = Category.all
     cats = []
-    act = []
 
     @categories.each do |category|
       cats.push({
-        :id => category.id,
-        :title => category.title,
-        :activities => category.activities,
-        :image => category.image.url
-      })
-    end
-
-    @activities.each do |activity|
-      act.push({
-        :id => activity.id,
-        :title => activity.title,
-        :users => activity.users
-      })
+          :id => category.id,
+          :title => category.title,
+          :activities => category.activities,
+          :image => category.image.url
+        })
     end
 
     respond_to do |format|
       format.html
-      format.json {
-        render :json => {
-          :cats => cats,
-          :act => act
-          }
-        }
+      format.json { render :json => cats }
     end
   end
 
