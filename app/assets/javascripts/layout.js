@@ -14,7 +14,9 @@ $(document).ready(function() {
         }
     });
 
-    $('leaflet-control-layers').addClass("leaflet-control-layers-expanded");
+    $('#button2').click(function() {
+        $('#panel').toggle( "blind" );
+    });
 
     $('.login').click(function() {
         $('#modal').hide();

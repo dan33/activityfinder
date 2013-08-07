@@ -28,7 +28,7 @@ a {
   width: 320px;
   z-index: 3000;
   position: absolute;
-  top: 55px;
+  top: 30px;
   left: 30px;
 }
 
@@ -76,16 +76,27 @@ a {
   background: white;
 }
 
+#button2 p {
+  line-height: 58.5px;
+  font-size: 1.3em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
 #panel {
   position: absolute;
   left: 30px;
-  top: 178px;
+  top: 153px;
   width: 293px;
   height: auto;
   min-height: 100px;
   max-height: 800px;
   overflow: auto;
-  opacity: 0.8;
   background: white;
 }
 
@@ -351,6 +362,10 @@ html, body {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
+body .leaflet-bottom {
+  display: none;
+}
+
 body .leaflet-control-attribution .leaflet-control {
   position: absolute;
   bottom: 0;
@@ -360,14 +375,16 @@ body .leaflet-control-container {
   width: 200px;
   position: absolute;
   right: 0;
-  top: 4%;
+  top: 30px;
 }
 
 body .leaflet-right {
+  top: -10px;
   right: 40px;
 }
 
 body .leaflet-left {
+  top: -10px;
   left: 145px;
 }
 
