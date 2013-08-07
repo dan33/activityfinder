@@ -24,12 +24,69 @@ a {
 }
 
 #container {
-  height: 100%;
-  width: 18%;
+  height: 120px;
+  width: 320px;
   z-index: 3000;
   position: absolute;
-  top: 2%;
-  left: 1%;
+  top: 55px;
+  left: 30px;
+}
+
+#profilepic {
+  float: left;
+  height: 120px;
+  width: 120px;
+  display: inline-block;
+  background: white;
+}
+
+#ppic {
+  height: 120px;
+  width: 120px;
+}
+
+#actuserpic {
+  height: 30px;
+  width: 30px;
+}
+
+#buttons {
+  position: relative;
+  float: right;
+  width: 200px;
+  height: 120px;
+}
+
+#button1 {
+  display: inline-block;
+  float: left;
+  height: 58.5px;
+  width: 170px;
+  margin-left: 3px;
+  background: white;
+}
+
+#button2 {
+  display: inline-block;
+  float: left;
+  margin-top: 3px;
+  margin-left: 3px;
+  height: 58.5px;
+  width: 170px;
+  background: white;
+}
+
+#panel {
+  position: absolute;
+  left: 30px;
+  top: 178px;
+  width: 293px;
+  height: auto;
+  min-height: 100px;
+  max-height: 800px;
+  overflow: auto;
+  opacity: 0.8;
+  background: white;
 }
 
 #user_nav {
@@ -58,34 +115,24 @@ html, body {
   top: 5%;
 }
 
-#panel {
-  width: 100%;
-  background-color: white;
-  height: 57%;
+#search {
   position: absolute;
-  top: 93%;
-  z-index: 2000;
+  height: 58.5px;
+  width: 35%;
+  bottom: 2%;
+  right: 1%;
+  z-index: 3000;
+  background: white;
+  opacity: 0.8;
 }
 
-#panel.panel_show {
-  top: 43%;
-  position: absolute;
-}
-
-#panelsearch {
-  position: absolute;
-  height: 12%;
-  width: 50%;
-  left: 51%;
-  top: 0.9%;
-}
-
-#panelsearch input {
+#search input {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   border: none;
-  height: 87%;
-  width: 88%;
+  margin-left: 10px;
+  height: 100%;
+  width: 100%;
   outline: none;
   font-size: 1.3em;
   background: transparent;
@@ -121,30 +168,6 @@ html, body {
   position: relative;
   text-align: center;
   height: 100%;
-}
-
-#menubar #panelme {
-  width: 25%;
-  height: 12%;
-  position: absolute;
-  left: 0;
-}
-
-#leftpanel {
-  width: 25%;
-  height: 100%;
-  position: absolute;
-  top: 12.5%;
-  border: 2px solid white;
-}
-
-#middlepanel {
-  width: 25%;
-  height: 100%;
-  left: 25%;
-  position: absolute;
-  top: 12.5%;
-  border: 2px solid white;
 }
 
 .clear {
@@ -199,6 +222,26 @@ html, body {
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
+
+body .leaflet-control-attribution .leaflet-control {
+  position: absolute;
+  bottom: 0;
+}
+
+body .leaflet-control-container {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  top: 4%;
+}
+
+body .leaflet-right {
+  right: 40px;
+}
+
+body .leaflet-left {
+  left: 145px;
+}
 
 
 body .leaflet-control-zoom,
