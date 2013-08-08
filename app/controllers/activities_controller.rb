@@ -1,5 +1,5 @@
 class ActivitiesController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index]
+  before_filter :authenticate_user!, :except => [:index, :locate]
   before_filter :authorize_user, :only => [:edit, :update, :destroy]
 
   # def new
