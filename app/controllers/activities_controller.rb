@@ -9,11 +9,11 @@ class ActivitiesController < ApplicationController
   def create
     @activity = Activity.create(params[:activity])
     @membership = current_user.memberships.create(:activity_id => @activity.id, :role => 'owner')
-      if @activity.save
-        redirect_to @activity
-      else
-        render :new
-      end
+    if @activity.save
+      redirect_to @activity
+    else
+      render :new
+    end
   end
 
   def index
@@ -23,11 +23,11 @@ class ActivitiesController < ApplicationController
 
     @categories.each do |category|
       cats.push({
-          :id => category.id,
-          :title => category.title,
-          :activities => category.activities,
-          :image => category.image.url
-        })
+                  :id => category.id,
+                  :title => category.title,
+                  :activities => category.activities,
+                  :image => category.image.url
+      })
     end
 
     respond_to do |format|
@@ -69,40 +69,40 @@ class ActivitiesController < ApplicationController
 
   def locate
     result = Geocoder.search(params[:address]).first
-      if result.present?
-        @latlong = [result.latitude, result.longitude]
-        @categories = Category.all
-        cats = []
+    if result.present?
+      @latlong = [result.latitude, result.longitude]
+      @categories = Category.all
+      cats = []
 
-        @categories.each do |category|
+      @categories.each do |category|
         cats.push({
-          :id => category.id,
-          :title => category.title,
-          :activities => category.activities,
-          :image => category.image.url
+                    :id => category.id,
+                    :title => category.title,
+                    :activities => category.activities,
+                    :image => category.image.url
         })
-        end
-
-        respond_to do |format|
-          format.json {
-            render :json => {
-              :latlong => @latlong,
-              :cats => cats
-              }
-            }
-        end
-      else
-        flash[:notice] = "Please enter a valid location"
-        redirect_to root_path
       end
-   end
 
-   private
-   def authorize_user
-      @activity = Activity.find(params[:id])
-      unless current_user.memberships.where(:activity_id => @activity.id).first.role == "owner"
-        redirect_to @activity
-        flash[:notice] = "You are not authorised to edit this activity"
+      respond_to do |format|
+        format.json {
+          render :json => {
+            :latlong => @latlong,
+            :cats => cats
+          }
+        }
       end
+    else
+      flash[:notice] = "Please enter a valid location"
+      redirect_to root_path
     end
+  end
+
+  private
+  def authorize_user
+    @activity = Activity.find(params[:id])
+    unless current_user.memberships.where(:activity_id => @activity.id).first.role == "owner"
+      redirect_to @activity
+      flash[:notice] = "You are not authorised to edit this activity"
+    end
+  end
 end

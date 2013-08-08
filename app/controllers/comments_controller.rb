@@ -8,11 +8,11 @@ class CommentsController < ApplicationController
   def create
     @comment = @activity.comments.new(params[:comment])
     @comment.user = current_user
-      if @comment.save
-        redirect_to @activity
-      else
-        redirect_to @activity
-      end
+    if @comment.save
+      redirect_to @activity
+    else
+      redirect_to @activity
+    end
   end
 
   def index
