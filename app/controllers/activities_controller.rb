@@ -2,9 +2,9 @@ class ActivitiesController < ApplicationController
   before_filter :authenticate_user!
   before_filter :authorize_user, :only => [:edit, :update, :destroy]
 
-  def new
-    @activity = Activity.new
-  end
+  # def new
+  #   @activity = Activity.new
+  # end
 
   def create
     @activity = Activity.create(params[:activity])
@@ -31,7 +31,6 @@ class ActivitiesController < ApplicationController
     end
 
     respond_to do |format|
-      format.html
       format.json { render :json => cats }
     end
   end

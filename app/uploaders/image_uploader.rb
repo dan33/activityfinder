@@ -8,9 +8,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   process :set_content_type
 
   # uncomment line below if local
-  # storage :file
+  storage :file
   #uncomment line below before pushing to github
-  storage :fog
+  # storage :fog
   # include CarrierWaveDirect::Uploader
 
   # Override the directory where uploaded files will be stored.

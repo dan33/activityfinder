@@ -1,13 +1,13 @@
 ActivityFinder::Application.routes.draw do
-	devise_for :users
+  devise_for :users
 
-	root :to => "home#index"
+  root :to => "home#index"
 
-	get '/users/profile' => "users#show"
-	post '/search/' => "activities#locate"
+  get '/users/profile' => "users#show"
+  post '/search/' => "activities#locate"
 
   resources :categories, :only => [:show, :index]
-	resources :users, :only => [:show]
+  resources :users, :only => [:show]
   resources :activities
   resources :comments
   resources :memberships
