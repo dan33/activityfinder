@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
   extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :name, use: [:slugged, :history]
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable
