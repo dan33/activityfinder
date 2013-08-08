@@ -31,9 +31,11 @@ describe User do
     before do
       @user2 = FactoryGirl.create(:user)
       @activity2 = @user2.activities.create(:title => "blah", :description => "excellent activity", :category_id => 1, :address => "Bondi Road Medical Centre, Bondi Road, Bondi, New South Wales")
+      @user2.memberships[0].role = "owner"
       @user = FactoryGirl.create(:user)
       @activity = FactoryGirl.create(:activity)
       @category = FactoryGirl.create(:category)
+      # @membership = @user.memberships.create(:activity_id => 1)
       #@membership = Membership.create(:user_id => @user.id, :activity_id => @activity.id)
     end
 
@@ -89,8 +91,6 @@ describe User do
 
     it "should not be able to join an activity if already member" do
     end
-
-
 
     it "should be able to join an activity" do
       #@membership = Membership.create(:user_id = @user2.id, :activity_id => @activity.id)
