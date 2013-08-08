@@ -1,11 +1,19 @@
-<%= simple_form_for @activity do |f| %>
-<h2>CREATE AN ACTIVITY</h2><br><br>
-      <div id="close">
-    X
-   </div>
-	<%= f.input :title, :required => true, :autofocus => true, :placeholder => 'Name of the Activity: ' %>
-	<%= f.input :description, :required => true, :placeholder => 'Description: ' %>
-	<%= f.input :address, :required => true, :placeholder => 'Address: ' %>
-	<%= f.association :category, :required => true %>
-	<%= f.submit %>
+<% if current_user %>
+    <%= simple_form_for @activity do |f| %>
+    <h2>CREATE AN ACTIVITY</h2><br><br>
+          <div id="close">
+        X
+       </div>
+    	<%= f.input :title, :required => true, :autofocus => true, :placeholder => 'Name of the Activity: ' %>
+    	<%= f.input :description, :required => true, :placeholder => 'Description: ' %>
+    	<%= f.input :address, :required => true, :placeholder => 'Address: ' %>
+    	<%= f.association :category, :required => true %>
+    	<%= f.submit %>
+    <% end %>
+<% else %>
+    <script type="text/javascript">
+        if (window.location.pathname != '/') {
+        window.location.href="/"
+    };
+    </script>
 <% end %>
