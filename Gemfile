@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+	ruby '1.9.3'
 
 	gem 'rails', '3.2.13'
 	gem 'pg', '~> 0.15.1'
@@ -13,6 +14,10 @@ source 'https://rubygems.org'
 	gem 'ancestry'
 	gem 'carrierwave'
 	gem "rmagick"
+	gem 'fog'
+	gem 'carrierwave_direct'
+	gem 'sidekiq'
+	gem 'thin'
 
 group :development, :test do
 
