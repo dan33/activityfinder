@@ -10,6 +10,8 @@
 <body>
 
 	<% if user_signed_in? %>
+		<div class="block_out hidden">
+		</div>
 	<% else %>
 		<div class="block_out">
 		</div>
@@ -48,10 +50,6 @@
 			<%= render :partial => 'devise/registrations/new' %>
 		</div>
 
-		<div class="new_activity hidden">
-			# render :partial => 'activities/form'
-		</div>
-
 	<% end %>
 
 	<% if user_signed_in? %>
@@ -65,8 +63,8 @@
 		</div>
 	<% end %>
 
-		<div id="user_nav">
-			<%= render :partial => 'layouts/intellinav' %>
+		<div class="new_activity hidden">
+			<%= render :partial => 'activities/form' %>
 		</div>
 
 	<% flash.each do |name, msg| %>
