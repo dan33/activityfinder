@@ -14,17 +14,17 @@
 require 'spec_helper'
 
 describe Comment do
-	describe 'A comment' do
-		before do
-			@user = FactoryGirl.create(:user)
-			@comment = FactoryGirl.create(:comment)
-		end
+  describe 'A comment' do
+    before do
+      @user = FactoryGirl.create(:user)
+      @comment = FactoryGirl.create(:comment)
+    end
 
-		it { should belong_to(:user) }
-		it { should belong_to(:activity) }
+    it { should belong_to(:user) }
+    it { should belong_to(:activity) }
 
-		it "should have a descrption" do
-			expect(@comment.description).to_not eq(nil)
-		end
-	end
+    it "should have a descrption" do
+      expect(@comment.description).to_not eq(nil)
+    end
+  end
 end

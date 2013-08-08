@@ -27,84 +27,92 @@
 require 'spec_helper'
 
 describe User do
-	describe 'A valid user' do
-		before do
-			@user2 = FactoryGirl.create(:user)
-			@user = FactoryGirl.create(:user)
-			@activity = FactoryGirl.create(:activity)
-			@category = FactoryGirl.create(:category)
-			#@membership = Membership.create(:user_id => @user.id, :activity_id => @activity.id)
-		end
+  describe 'A valid user' do
+    before do
+      @user2 = FactoryGirl.create(:user)
+      @activity2 = @user2.activities.create(:title => "blah", :description => "excellent activity", :category_id => 1, :address => "Bondi Road Medical Centre, Bondi Road, Bondi, New South Wales")
+      @user2.memberships[0].role = "owner"
+      @user = FactoryGirl.create(:user)
+      @activity = FactoryGirl.create(:activity)
+      @category = FactoryGirl.create(:category)
+      # @membership = @user.memberships.create(:activity_id => 1)
+      #@membership = Membership.create(:user_id => @user.id, :activity_id => @activity.id)
+    end
 
-		it { should have_many(:memberships) }
+    it { should have_many(:memberships) }
 
-		it { should have_many(:activities).through(:memberships) }
+    it { should have_many(:activities).through(:memberships) }
 
-		it { should have_many(:comments) }
+    it { should have_many(:comments) }
 
-		it "creates a user with valid information" do
-			expect(@user).to be
-		end
+    it "creates a user with valid information" do
+      expect(@user).to be
+    end
 
-		it "should be able to create an activity" do
-			@user.activities << @activity
-			@activity.save
-			@user.reload
-			expect(@user.activities.count).to eq(1)
-		end
+    it "should be able to create an activity" do
+      @user.activities << @activity
+      @activity.save
+      @user.save
+      expect(@user.activities.count).to eq(1)
+    end
 
-		it "should set longitude and latitude based off city" do
-			expect(@user.longitude).to_not eq(nil)
-			expect(@user.latitude).to_not eq(nil)
-		end
+    it "should set longitude and latitude based off city" do
+      expect(@user.longitude).to_not eq(nil)
+      expect(@user.latitude).to_not eq(nil)
+    end
 
-		it "should be a creator if they create an activity" do
-			@user2.activities << @activity
-			@activity.save
-			@user2.reload
-			expect(@user2.memberships.last.role).to eq('owner')
-		end
+    it "should be a creator if they create an activity" do
+      expect(@user2.memberships.first.role).to eq('owner')
+    end
 
-		it "should be a member if join an activity" do
-			pending
-		end
+    it "should be a member if join an activity" do
+      @user.activities << @activity2
+      @user.save
+      @activity2.save
+      expect(@user.memberships.count).to eq(1)
+    end
 
-		it "should be able to leave activity if member" do
-			pending
-		end
+    it "should be able to leave activity if member" do
+      @user.activities << @activity
+      @activity.save
+      @user.save
+      c = @user.memberships.count
+      m = @user.memberships.last
+      m.destroy
+      m.save
+      expect (@user.memberships.count).to eq(c - 1)
+    end
 
-		it "should not be able to leave activity if creator" do
-		end
+    it "should not be able to leave activity if creator" do
+    end
 
-		it "should be able to delete an activity if there are no members" do
-		end
+    it "should be able to delete an activity if there are no members" do
+    end
 
-		it "should not be able to join an activity if already member" do
-		end
+    it "should not be able to join an activity if already member" do
+    end
 
+    it "should be able to join an activity" do
+      #@membership = Membership.create(:user_id = @user2.id, :activity_id => @activity.id)
+      #@user.activities << @activity
+      #expect(@activity.users.count).to eq(2)
+    end
+  end
 
+  describe "An invalid user" do
+    before do
+      @user2000 = User.create(:name => "free", :email => "free@me.com", :city => "rrrrrrrrgjh4", :password => "password", :password_confirmation => "password")
+      @count = User.count
+      @user = User.create(:name => '', :email => '', :gender => '', :city => '')
+    end
 
-		it "should be able to join an activity" do
-			#@membership = Membership.create(:user_id = @user2.id, :activity_id => @activity.id)
-			#@user.activities << @activity
-			#expect(@activity.users.count).to eq(2)
-		end
-	end
+    it "should not be created" do
+      expect(User.count).to eq(@count)
+    end
 
-	describe "An invalid user" do
-		before do
-			@user2000 = User.create(:name => "free", :email => "free@me.com", :city => "rrrrrrrrgjh4", :password => "password", :password_confirmation => "password")
-			@count = User.count
-			@user = User.create(:name => '', :email => '', :gender => '', :city => '')
-		end
-
-		it "should not be created" do
-			expect(User.count).to eq(@count)
-		end
-
-		it "should set long and lat to AUS default if they don't enter a valid city" do
-			expect(@user2000.latitude).to eq(32.3456)
-			expect(@user2000.longitude).to eq(141.4346)
-		end
-	end
+    it "should set long and lat to AUS default if they don't enter a valid city" do
+      expect(@user2000.latitude).to eq(32.3456)
+      expect(@user2000.longitude).to eq(141.4346)
+    end
+  end
 end

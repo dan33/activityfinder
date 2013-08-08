@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :category do
- 	title {["Running", "Walking", "Surfing", "Photography", "Nightlife", "Coding ehhhhhhh"].sample}
+    title {["Running", "Walking", "Surfing", "Photography", "Nightlife", "Coding ehhhhhhh"].sample}
   end
 end

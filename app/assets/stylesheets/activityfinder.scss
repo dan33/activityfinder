@@ -95,7 +95,7 @@ a {
 }
 
 #button1 p {
-  line-height: 50px;
+  line-height: 53.5px;
   font-size: 1.3em;
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
@@ -103,7 +103,7 @@ a {
 }
 
 #button2 p {
-  line-height: 48.5px;
+  line-height: 53.5px;
   font-size: 1.3em;
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
@@ -193,6 +193,15 @@ a {
   outline: none;
 }
 
+.user_image {
+  width: 300px;
+  padding-left: 72px;
+}
+
+#user_remove_image {
+  width: auto;
+}
+
 .form-actions input {
   width: 300px;
   margin-left: 57px;
@@ -214,7 +223,7 @@ a {
   width: 293px;
   height: auto;
   min-height: 100px;
-  max-height: 800px;
+  max-height: 500px;
   overflow: auto;
   background: white;
   border: 3px solid black;
@@ -259,6 +268,8 @@ a {
   text-align: center;
   padding-top: 2px;
   padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #user_nav {
@@ -447,6 +458,22 @@ form input {
   margin-left: -250px;
 }
 
+.edit_user_button {
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  height: 500px;
+  z-index: 40000;
+  top: 50%;
+  margin-top: -250px;
+  background: white;
+  margin-left: -250px;
+}
+
+.edit_user_button img {
+  width: 50px;
+}
+
 .new_activity {
   width: 500px;
   position: absolute;
@@ -469,6 +496,28 @@ form input {
   z-index: 300000;
 }
 
+.edit_user_button {
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  height: 500px;
+  z-index: 40000;
+  top: 50%;
+  margin-top: -250px;
+  background: white;
+  margin-left: -250px;
+  padding: 38px;
+  border: 3px solid black;
+}
+
+.edit_user_button h2 {
+  font-size: 2em;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 300000;
+}
+
 .login {
   position: absolute;
   width: 245px;
@@ -480,6 +529,43 @@ form input {
 .login:hover {
   background: black;
   color: white;
+}
+
+.edit_user {
+  width: 287px;
+  height: 61px;
+}
+
+.edit_user:hover {
+  color: white;
+  background: black;
+}
+
+.edit_user h1 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 20px;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+
+.log_out {
+  width: 287px;
+  height: 61px;
+}
+
+.log_out:hover {
+  color: white;
+  background: black;
+}
+
+.log_out h1 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 20px;
+  text-decoration: none;
 }
 
 .signup {

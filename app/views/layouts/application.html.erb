@@ -67,6 +67,10 @@
 			<%= render :partial => 'activities/form' %>
 		</div>
 
+		<div class="edit_user_button hidden">
+			<%= render :partial => 'devise/registrations/edit' %>
+		</div>
+
 	<% flash.each do |name, msg| %>
 		<%= content_tag :div, msg, id: "flash_#{name}" %>
 	<% end %>
