@@ -288,7 +288,7 @@ html, body {
 }
 
 .member_photos {
-  width: 100px;
+  width: 101px;
   margin-left: 90.5px;
 }
 
@@ -301,7 +301,7 @@ html, body {
   z-index: 3000;
   border: 3px solid black;
   background: white;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 #search input {
@@ -367,6 +367,7 @@ form input {
   border-bottom: 1px solid black;
   margin-left: 20px;
   resize: none;
+  margin-bottom: 20px;
 }
 
 .panel_show h4 {
@@ -551,8 +552,9 @@ form input {
   width: 100%;
   z-index: 30000;
   background: black;
-  opacity: 0.6;
+  opacity: 0.7;
   position: absolute;
+  border: 15px solid white;
 }
 
 .block_out2 {
@@ -560,8 +562,9 @@ form input {
   width: 100%;
   z-index: 30000;
   background: black;
-  opacity: 0.6;
+  opacity: 0.7;
   position: absolute;
+  border: 15px solid white;
 }
 
 #modal {
