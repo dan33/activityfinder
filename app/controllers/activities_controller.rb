@@ -1,6 +1,6 @@
 class ActivitiesController < ApplicationController
   before_filter :authenticate_user!, :only => [:create, :new]
-  before_filter :authorize_user, :only => [:edit, :update]
+  before_filter :authorize_user, :only => [:edit, :update, :destroy]
 
   def new
     @activity = Activity.new
@@ -51,11 +51,24 @@ class ActivitiesController < ApplicationController
 
   def update
     @activity = Activity.find_by_slug(params[:id])
-    @activity.update_attributes(params[:activity])
-    redirect_to @activity
+    if @activity.update_attributes(params[:activity])
+      redirect_to @activity
+    else
+      render 'edit'
+    end
   end
 
- def locate
+  def destroy
+    @activity = Activity.find_by_slug(params[:id])
+    if @activity.users == current_user
+      @activity.destroy
+    else
+      flash[:notice] = "You cannot delete an activity whilst it has other members"
+      redirect_to root_path
+    end
+  end
+
+  def locate
     result = Geocoder.search(params[:address]).first
       if result.present?
         @latlong = [result.latitude, result.longitude]
