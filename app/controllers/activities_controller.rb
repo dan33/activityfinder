@@ -69,7 +69,8 @@ class ActivitiesController < ApplicationController
             }
         end
       else
-        #render error message
+        flash[:notice] = "Please enter a valid location"
+        redirect_to root_path
       end
    end
 
