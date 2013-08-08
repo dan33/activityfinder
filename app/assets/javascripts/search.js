@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#search_submit').click(function() {
     var search_result = $('#search_field').val();
     if (search_result == ""){
-      $('#search_field').attr('placeholder', 'Please enter a location');
+      $('#search_field').attr('placeholder', 'Please enter a location...');
       return;
     }
     $.ajax({
