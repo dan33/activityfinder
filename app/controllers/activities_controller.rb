@@ -1,6 +1,6 @@
 class ActivitiesController < ApplicationController
   before_filter :authenticate_user!, :only => [:create, :new]
-  before_filter :authorize_user, :only => [:update]
+  before_filter :authorize_user, :only => [:edit, :update, :destroy]
 
   def new
     @activity = Activity.new
@@ -44,7 +44,31 @@ class ActivitiesController < ApplicationController
     # check to see if users are evident here
   end
 
- def locate
+  def edit
+    @activity = Activity.find_by_slug(params[:id])
+    render 'edit'
+  end
+
+  def update
+    @activity = Activity.find_by_slug(params[:id])
+    if @activity.update_attributes(params[:activity])
+      redirect_to @activity
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @activity = Activity.find_by_slug(params[:id])
+    if @activity.users == current_user
+      @activity.destroy
+    else
+      flash[:notice] = "You cannot delete an activity whilst it has other members"
+      redirect_to root_path
+    end
+  end
+
+  def locate
     result = Geocoder.search(params[:address]).first
       if result.present?
         @latlong = [result.latitude, result.longitude]
@@ -69,15 +93,17 @@ class ActivitiesController < ApplicationController
             }
         end
       else
-        #render error message
+        flash[:notice] = "Please enter a valid location"
+        redirect_to root_path
       end
    end
 
    private
    def authorize_user
       @activity = Activity.find(params[:id])
-      unless current_user?(@activity.user)
+      unless current_user.memberships.where(:activity_id => @activity.id).first.role == "owner"
         redirect_to @activity
+        flash[:notice] = "You are not authorised to edit this activity"
       end
     end
 end

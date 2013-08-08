@@ -6,7 +6,9 @@ describe ActivitiesController do
       5.times { |i| @activity = FactoryGirl.create(:activity) }
     end
 
-    describe 'as HTML' do
+
+    context "as HTML request" do
+
       before do
         get :index
       end
@@ -20,6 +22,30 @@ describe ActivitiesController do
         expect(assigns(:activities)).to be
         expect(assigns(:activities).length).to eq(5)
         expect(assigns(:activities).first.class).to eq(Activity)
+      end
+    end
+
+
+    context 'as JSON request' do
+      before { pending }
+      before do
+        @user = FactoryGirl.create(:user)
+        sign_in @user
+        @category = Category.create(:title => 'Relaxation')
+        @activity = Activity.create( :title => "blah", :description => "excellent activity", :category_id => 1, :address => "Bondi Road Medical Centre, Bondi Road, Bondi, New South Wales")
+        @category.activities << @activity
+        @category.save
+        @activity.save
+        xhr :get, :index, {}
+        @data = JSON.parse(response.body)
+      end
+
+      it "should give the categories in an instance variable" do
+        expect(assigns(:categories)).to be
+      end
+
+      it "should have the category Relaxation in the JSON response" do
+        expect(@data[0]['title']).to eq('Relaxation')
       end
     end
   end
@@ -88,4 +114,57 @@ describe ActivitiesController do
         expect(Activity.count).to eq(0)
       end
     end
+
+    describe 'POST to #locate' do
+      before do
+        @user = FactoryGirl.create(:user)
+        sign_in @user
+      end
+
+      context "with valid information" do
+        before do
+          @category = Category.create(:title => 'Relaxation')
+          @activity = Activity.create( :title => "blah", :description => "excellent activity", :category_id => 1, :address => "Bondi Road Medical Centre, Bondi Road, Bondi, New South Wales")
+          @category.activities << @activity
+          @category.save
+          @activity.save
+
+          xhr :post, :locate,  { :address => "New York"}
+          @data = JSON.parse(response.body)
+        end
+
+        it "should have a response code of 200" do
+          response.code.should == "200"
+        end
+
+        it "should give content type JSON" do
+          expect(response.content_type).to eq('application/json')
+        end
+
+      it "should parse as JSON" do
+          lambda { JSON.parse(response.body) }.should_not raise_error
+      end
+
+        it "should assign a latitude and longitude" do
+          expect(assigns(:latlong)).to be
+        end
+
+        it "should have the latitude and logitude for New York in the JSON response" do
+
+          expect(@data['latlong'][0]).to eq(40.7143528)
+          expect(@data['latlong'][1]).to eq(-74.00597309999999)
+        end
+
+        it "should have the category Relaxation in the JSON response" do
+          expect(@data['cats'][0]['title']).to eq('Relaxation')
+        end
+
+        it "should have the activity blah in the JSON response" do
+          expect(@data['cats'][0]['activities'][0]['title']).to eq ('blah')
+        end
+
+      end
+    end
   end
+
+

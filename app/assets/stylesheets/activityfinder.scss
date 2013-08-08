@@ -353,8 +353,10 @@ form input {
   height: 100%;
 }
 
-#panel {
-
+#panel form input {
+  width: 200px;
+  margin-left: 45px;
+  margin-bottom: 15px;
 }
 
 #panel textarea {
@@ -368,6 +370,14 @@ form input {
 }
 
 .panel_show h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px;
+}
+
+#panel h4 {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.4em;
   text-transform: uppercase;

@@ -4,7 +4,7 @@ $(document).ready(function() {
         $('#panel').addClass("panel_show", 0);
     } else {
         $('#button2').empty();
-        $('#button2').append('<p>ACTIVITIES</p>');
+        $('#button2').append('<p>HIDE ACTIVITY</p>');
     }
 
     $('#loginbutt').hide();
@@ -23,11 +23,24 @@ $(document).ready(function() {
 
     $('#button1').click(function() {
         $('.block_out').removeClass('hidden');
+        $('.block_out').show();
         $('.new_activity').removeClass('hidden');
         $('.new_activity').show();
+        $('#container').hide();
+        $('.leaflet-top').hide();
+        $('#search').hide();
+        $('#panel').hide();
     });
 
     $('#button2').click(function() {
+        var text = $('#button2').text();
+        if (text == "SHOW ACTIVITY") {
+            $('#button2').empty();
+            $('#button2').append('<p>HIDE ACTIVITY</p>');
+        } else {
+            $('#button2').empty();
+            $('#button2').append('<p>SHOW ACTIVITY</p>');
+        }
         $('#panel').css({
             'width': '299px',
             'overflow-y': 'hidden'
@@ -46,6 +59,10 @@ $(document).ready(function() {
         $('.log_in').show();
         $('#signupbutt').hide();
         $('#loginbutt').hide();
+        $('#container').hide();
+        $('.leaflet-top').hide();
+        $('#search').hide();
+        $('#panel').hide();
     });
 
     $('#signuph2').click(function() {
@@ -54,6 +71,10 @@ $(document).ready(function() {
         $('.sign_up').show();
         $('#signupbutt').hide();
         $('#loginbutt').hide();
+        $('#container').hide();
+        $('.leaflet-top').hide();
+        $('#search').hide();
+        $('#panel').hide();
     });
 
     $('#loginh2').click(function() {
@@ -62,6 +83,10 @@ $(document).ready(function() {
         $('.sign_up').hide();
         $('#signupbutt').show();
         $('#loginbutt').show();
+        $('#container').hide();
+        $('.leaflet-top').hide();
+        $('#search').hide();
+        $('#panel').hide();
     });
 
     $('#close').click(function() {
@@ -72,6 +97,12 @@ $(document).ready(function() {
         $('#loginbutt').show();
         $('#signupbutt').show();
         $('.new_activity').hide();
+        $('#container').show();
+        $('.leaflet-top').show();
+        $('#search').show();
+        $('#panel').hide();
+        $('#button2').empty();
+        $('#button2').append('<p>SHOW ACTIVITY</p>');
     });
 
     $('#closelogin').click(function() {
@@ -80,6 +111,10 @@ $(document).ready(function() {
         $('.block_out').hide();
         $('#loginbutt').show();
         $('#signupbutt').show();
+        $('#container').show();
+        $('.leaflet-top').show();
+        $('#search').show();
+        $('#panel').show();
     });
 
     $('#closesignup').click(function() {
@@ -88,6 +123,10 @@ $(document).ready(function() {
         $('.block_out').hide();
         $('#loginbutt').show();
         $('#signupbutt').show();
+        $('#container').show();
+        $('.leaflet-top').show();
+        $('#search').show();
+        $('#panel').show();
     });
 
     $('.signup').click(function() {
