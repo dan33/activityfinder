@@ -4,5 +4,10 @@
       %h1.activity_title= activity.title
       %p= pluralize(activity.comments.count, 'comments')
 
+/ = link_to (edit_user_registration_path) do
+%div.edit_user
+  %h1 EDIT PROFILE
 
-
+= link_to destroy_user_session_path, :method => :delete do
+  %div.log_out
+    %h1 LOG OUT

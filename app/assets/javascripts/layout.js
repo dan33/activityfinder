@@ -44,7 +44,7 @@ $(document).ready(function() {
             }
         } else {
             var text2 = $.trim($('#button2').text());
-                if (text2 == "SHOW PROFILE") {
+            if (text2 == "SHOW PROFILE") {
                 $('#button2').empty();
                 $('#button2').append('<p>HIDE PROFILE</p>');
             } else {
@@ -144,6 +144,7 @@ $(document).ready(function() {
         $('.leaflet-top').show();
         $('#search').show();
         $('#panel').show();
+        $('.edit_user_button').hide();
     });
 
     $('.signup').click(function() {
@@ -164,5 +165,10 @@ $(document).ready(function() {
         $('.log_in').show();
         $('#signupbutt').hide();
         $('#loginbutt').hide();
+    });
+
+    $('.edit_user').click(function () {
+        $('.block_out').show();
+        $('.edit_user_button').show();
     });
 });
