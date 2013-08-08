@@ -63,7 +63,7 @@ $(document).ready(function() {
 
           // It then adds a pop up with title, description, a link to that particular activities show page
 
-        }).bindPopup('<h3>' + activity.title + '</h3>' + '<br>' + activity.description + '<br>' + '<a class="button" href=/activities/' + activity.slug + '>' + "View Activity" + '</a>');
+        }).bindPopup('<h3>' + activity.title + '</h3>' + '<br>' + activity.description + '<br>' + '<br>' + '<a class="button" href=/activities/' + activity.slug + '>' + "View Activity" + '</a>');
 
         // And then pushes all pins into the all_pins array, which is then returned
 
