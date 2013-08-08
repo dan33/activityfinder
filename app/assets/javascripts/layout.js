@@ -1,20 +1,29 @@
 $(document).ready(function() {
 
- if (window.location.pathname == "/") {
-  $('#panel').addClass("panel_show", 0);
- } else {
+ // if (window.location.pathname == "/") {
+ //  $('#panel').addClass("panel_show", 0);
+ // } else {
 
-  // THIS CHANGES THE STATE OF THE LOWER BUTTON (NORMALLY PROFILE) TO HIDE ACTIVITY WHEN NOT ON ROOT PATH
+  // This changes the state of the buttons to Hide Activity when not on the root path
 
+ //  $('#button2').empty();
+ //  $('#button2').append('<p>HIDE ACTIVITY</p>');
+ // }
+
+ // Think the following code works better than above.  Need to work on this...
+
+ if (window.location.pathname != "/") {
   $('#button2').empty();
   $('#button2').append('<p>HIDE ACTIVITY</p>');
  }
 
- // ON DOCUMENT LOAD HIDE ALL BUT MODAL AND THE BLACK OPAQUE BACKGROUND
+ // On document load, hide all but the modal and the black opaque background
 
  $('#loginbutt').hide();
  $('#signupbutt').hide();
  $('#user_nav').hide();
+
+ // Don't see the need for the following code
 
  // $('#panelactivities, #panelme').click(function() {
  //  $('#panel').toggleClass("panel_show", 400);
@@ -225,19 +234,5 @@ $(document).ready(function() {
   $('.block_out').show();
   $('.edit_user_button').show();
  });
+
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
