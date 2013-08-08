@@ -7,7 +7,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MimeTypes
   process :set_content_type
 
-  include CarrierWaveDirect::Uploader
+  storage :fog
+  # include CarrierWaveDirect::Uploader
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
@@ -17,7 +18,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   def default_url
-   "/uploads/placeholder.jpg"
+   "placeholder.jpg"
   end
 
   # Process files as they are uploaded:
