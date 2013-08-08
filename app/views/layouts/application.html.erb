@@ -35,6 +35,9 @@
 			<div class="signup">
 				<h2>SIGN UP</h2>
 			</div>
+			<div id="close">
+				X
+			</div>
 		</div>
 
 		<div class="log_in hidden">
@@ -51,9 +54,9 @@
 
 	<% end %>
 
-	<div id="user_nav">
-		<%= render :partial => 'layouts/intellinav' %>
-	</div>
+		<div id="user_nav">
+			<%= render :partial => 'layouts/intellinav' %>
+		</div>
 
 	<% flash.each do |name, msg| %>
 		<%= content_tag :div, msg, id: "flash_#{name}" %>
