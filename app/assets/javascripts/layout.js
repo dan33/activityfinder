@@ -4,7 +4,7 @@ $(document).ready(function() {
         $('#panel').addClass("panel_show", 0);
     } else {
         $('#button2').empty();
-        $('#button2').append('<p>SHOW ACTIVITY</p>');
+        $('#button2').append('<p>HIDE ACTIVITY</p>');
     }
 
     $('#loginbutt').hide();
@@ -33,6 +33,14 @@ $(document).ready(function() {
     });
 
     $('#button2').click(function() {
+        var text = $('#button2').text();
+        if (text == "SHOW ACTIVITY") {
+            $('#button2').empty();
+            $('#button2').append('<p>HIDE ACTIVITY</p>');
+        } else {
+            $('#button2').empty();
+            $('#button2').append('<p>SHOW ACTIVITY</p>');
+        }
         $('#panel').css({
             'width': '299px',
             'overflow-y': 'hidden'
@@ -92,7 +100,9 @@ $(document).ready(function() {
         $('#container').show();
         $('.leaflet-top').show();
         $('#search').show();
-        $('#panel').show();
+        $('#panel').hide();
+        $('#button2').empty();
+        $('#button2').append('<p>SHOW ACTIVITY</p>');
     });
 
     $('#closelogin').click(function() {
