@@ -30,10 +30,14 @@ $(document).ready(function() {
         shadowAnchor: [10, 68],  // the same for the shadow
         popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
       });
-      var pin = L.marker([activity.latitude, activity.longitude], {icon: greenIcon }).bindPopup('<h3>' + activity.title + '</h3>' + '<br>' + activity.description + '<a href="#">' + "I'm a link" + '</a>');
+      var pin = L.marker([activity.latitude, activity.longitude], {icon: greenIcon }).bindPopup('<h3>' + activity.title + '</h3>' + '<br>' + activity.description + '<br>' + '<a class="button" href=/activities/' + activity.slug
+        + '>' + "View Activity" + '</a>');
       all_pins.push(pin);
       return pin;
     };
+
+
+
 
     _.each(data, process_category);
 
