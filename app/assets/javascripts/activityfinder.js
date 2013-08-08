@@ -24,20 +24,18 @@ $(document).ready(function() {
       var greenIcon = L.icon({
         iconUrl: activity.image,
         shadowUrl: '/assets/shadow.png',
-        iconSize:     [27, 45], // size of the icon
-        shadowSize:   [26, 23], // size of the shadow
-        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-        shadowAnchor: [10, 68],  // the same for the shadow
-        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+        iconSize: [27, 45], // size of the icon
+        shadowSize: [26, 23], // size of the shadow
+        iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+        shadowAnchor: [10, 68], // the same for the shadow
+        popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
       });
-      var pin = L.marker([activity.latitude, activity.longitude], {icon: greenIcon }).bindPopup('<h3>' + activity.title + '</h3>' + '<br>' + activity.description + '<br>' + '<a class="button" href=/activities/' + activity.slug
-        + '>' + "View Activity" + '</a>');
+      var pin = L.marker([activity.latitude, activity.longitude], {
+        icon: greenIcon
+      }).bindPopup('<h3>' + activity.title + '</h3>' + '<br>' + activity.description + '<br>' + '<a class="button" href=/activities/' + activity.slug + '>' + "View Activity" + '</a>');
       all_pins.push(pin);
       return pin;
     };
-
-
-
 
     _.each(data, process_category);
 
@@ -68,7 +66,9 @@ $(document).ready(function() {
     _.each(layers, function(layer) {
       layercake[layer.title] = layer.layer;
     });
-    L.control.layers({}, layercake, {collapsed: false}).addTo(map);
+    L.control.layers({}, layercake, {
+      collapsed: false
+    }).addTo(map);
   });
 
   $('button').click(function() {
