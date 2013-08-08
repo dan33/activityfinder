@@ -436,6 +436,28 @@ form input {
   margin-left: -250px;
 }
 
+.new_activity {
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  height: 500px;
+  z-index: 40000;
+  top: 50%;
+  margin-top: -250px;
+  background: white;
+  margin-left: -250px;
+  padding: 38px;
+  border: 3px solid black;
+}
+
+.new_activity h2 {
+  font-size: 2em;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 300000;
+}
+
 .login {
   position: absolute;
   width: 245px;
@@ -519,7 +541,16 @@ form input {
   width: 100%;
   z-index: 30000;
   background: black;
-  opacity: 0.4;
+  opacity: 0.6;
+  position: absolute;
+}
+
+.block_out2 {
+  height: 100%;
+  width: 100%;
+  z-index: 30000;
+  background: black;
+  opacity: 0.6;
   position: absolute;
 }
 
