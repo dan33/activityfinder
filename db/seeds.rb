@@ -3,13 +3,13 @@ Category.destroy_all
 Activity.destroy_all
 Membership.destroy_all
 
-u1 = User.create(:name => 'Jack Jeffress', :email => 'jack@gmail.com', :gender => 'male', :password => 'jackjeffress', :password_confirmation => 'jackjeffress', :city => 'Sydney, Australia', :image => File.open("/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/assets/images/jackjeffress.jpg"))
-u2 = User.create(:name => 'Dan Addington', :email => 'dan@gmail.com', :gender => 'male', :password => 'danaddington', :password_confirmation => 'danaddington', :city => 'Sydney, Australia', :image => File.open("/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/assets/images/danaddington.jpg"))
-u3 = User.create(:name => 'Andrew OBrien', :email => 'andrew@gmail.com', :gender => 'male', :password => 'andrewobrien', :password_confirmation => 'andrewobrien', :city => 'Sydney, Australia', :image => File.open("/Users/danieladdington/Projects/wdi/week_7/activityfinder/app/assets/images/andrewobrian.jpg"))
+u1 = User.create(:name => 'Jack Jeffress', :email => 'jack@gmail.com', :gender => 'male', :password => 'jackjeffress', :password_confirmation => 'jackjeffress', :city => 'Sydney, Australia', :image => File.open("/assets/images/jackjeffress.jpg"))
+u2 = User.create(:name => 'Dan Addington', :email => 'dan@gmail.com', :gender => 'male', :password => 'danaddington', :password_confirmation => 'danaddington', :city => 'Sydney, Australia', :image => File.open("/assets/images/danaddington.jpg"))
+u3 = User.create(:name => 'Andrew OBrien', :email => 'andrew@gmail.com', :gender => 'male', :password => 'andrewobrien', :password_confirmation => 'andrewobrien', :city => 'Sydney, Australia', :image => File.open("/assets/images/andrewobrian.jpg"))
 
-c1 = Category.create(:title => 'Relaxation', :image => File.open("Users/danieladdington/Projects/wdi/week_7/activityfinder/app/assets/images/leaf-green.png"))
-c2 = Category.create(:title => 'Exercise', :image => File.open("Users/danieladdington/Projects/wdi/week_7/activityfinder/app/assets/images/leaf-orange.png"))
-c3 = Category.create(:title => 'Work', :image => File.open("Users/danieladdington/Projects/wdi/week_7/activityfinder/app/assets/images/leaf-red.png"))
+c1 = Category.create(:title => 'Relaxation', :image => File.open("/assets/images/leaf-green.png"))
+c2 = Category.create(:title => 'Exercise', :image => File.open("/assets/images/leaf-orange.png"))
+c3 = Category.create(:title => 'Work', :image => File.open("/assets/images/leaf-red.png"))
 c4 = Category.create(:title => 'Eating / Drinking')
 c5 = Category.create(:title => 'Other')
 
