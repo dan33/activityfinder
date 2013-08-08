@@ -1,6 +1,10 @@
 $(document).ready(function() {
   $('#search_submit').click(function() {
     var search_result = $('#search_field').val();
+    if (search_result == ""){
+      $('#search_field').attr('placeholder', 'Please enter a location');
+      return;
+    }
     $.ajax({
       dataType: 'json',
       data: {
@@ -71,7 +75,7 @@ $(document).ready(function() {
         layercake[layer.title] = layer.layer;
       });
 
-      L.control.layers({}, layercake).addTo(map);
+      L.control.layers({}, layercake, {collapsed: false}).addTo(map);
 
     });
   });

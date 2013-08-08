@@ -121,6 +121,58 @@ a {
   background: white;
 }
 
+#loginbutt h2 {
+  line-height: 48.5px;
+  font-size: 1.3em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+#loginbutt {
+  position: absolute;
+  left: 27px;
+  top: 27px;
+  margin-top: 3px;
+  margin-left: 3px;
+  height: 58.5px;
+  width: 170px;
+  border: 3px solid black;
+  background: white;
+  z-index: 300000;
+}
+
+#loginbutt:hover {
+  background:black;
+  color:white;
+}
+
+#signupbutt h2 {
+  line-height: 48.5px;
+  font-size: 1.3em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+#signupbutt {
+  position: absolute;
+  left: 27px;
+  top: 89px;
+  margin-top: 3px;
+  margin-left: 3px;
+  height: 58px;
+  width: 170px;
+  border: 3px solid black;
+  background: white;
+  z-index: 300000;
+}
+
+#signupbutt:hover {
+  background:black;
+  color:white;
+}
+
 #button2:hover {
   background:black;
   color:white;
@@ -131,6 +183,25 @@ a {
   color: white;
 }
 
+.form-inputs input {
+  width: 300px;
+  margin-left: 57px;
+  height: 30px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 1.2em;
+  outline: none;
+}
+
+.form-actions input {
+  width: 300px;
+  margin-left: 57px;
+  height: 30px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 1.2em;
+  outline: none;
+}
 
 .hidden {
   display: none;
@@ -266,8 +337,8 @@ html, body {
 }
 
 form input {
-  width: 150px;
-  margin-left: 67.5px;
+  // width: 150px;
+  // margin-left: 67.5px;
 }
 
 #menubar #panelactivities p {
@@ -532,13 +603,13 @@ body .leaflet-control-layers {
   border: none;
 }
 
-body .leaflet-control-layers-expanded {
-  padding: 6px 10px 6px 6px;
-  color: #333;
-  background: white;
-  width: 200px;
-  height: 200px;
-}
+// body .leaflet-control-layers-expanded {
+//   padding: 6px 10px 6px 6px;
+//   color: #333;
+//   background: white;
+//   width: 200px;
+//   height: 200px;
+// }
 
 body .leaflet-control-layers-selector {
   margin-top: 2px;
@@ -546,12 +617,12 @@ body .leaflet-control-layers-selector {
   top: 1px;
 }
 
-body .leaflet-control-layers label {
-  display: block;
-}
+// body .leaflet-control-layers label {
+//   display: block;
+// }
 
-body .leaflet-control-layers-separator {
-  height: 0;
-  border-top: 1px solid #ddd;
-  margin: 5px -10px 5px -6px;
-}
+// body .leaflet-control-layers-separator {
+//   height: 0;
+//   border-top: 1px solid #ddd;
+//   margin: 5px -10px 5px -6px;
+// }

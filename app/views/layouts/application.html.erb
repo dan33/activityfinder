@@ -54,6 +54,17 @@
 
 	<% end %>
 
+	<% if user_signed_in? %>
+	<% else %>
+		<div id="loginbutt">
+			<h2>LOGIN</h2>
+		</div>
+
+		<div id="signupbutt">
+			<h2>SIGN UP</h2>
+		</div>
+	<% end %>
+
 		<div id="user_nav">
 			<%= render :partial => 'layouts/intellinav' %>
 		</div>
