@@ -24,10 +24,10 @@ $(document).ready(function() {
       var greenIcon = L.icon({
         iconUrl: activity.image,
         shadowUrl: '/assets/shadow.png',
-        iconSize:     [38, 65], // size of the icon
+        iconSize:     [27, 45], // size of the icon
         shadowSize:   [26, 23], // size of the shadow
         iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-        shadowAnchor: [4, 62],  // the same for the shadow
+        shadowAnchor: [10, 68],  // the same for the shadow
         popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
       });
       var pin = L.marker([activity.latitude, activity.longitude], {icon: greenIcon }).bindPopup('<h3>' + activity.title + '</h3>' + '<br>' + activity.description);
