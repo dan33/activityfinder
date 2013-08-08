@@ -2,6 +2,9 @@
 %p= @activity.description
 %p= @activity.address
 
+- if current_user.memberships.where(:activity_id => @activity.id, :user_id => current_user.id).first.role == 'owner'
+  %p.edit_activity_button Edit Activity
+
 - if @activity.users.include?(current_user)
   = button_to 'Leave activity', membership_path(current_user.memberships.where(:activity_id => @activity).first), :method => :delete unless current_user.name == @owner
   %h4 Organiser

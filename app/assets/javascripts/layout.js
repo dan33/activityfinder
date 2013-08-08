@@ -17,6 +17,8 @@ $(document).ready(function() {
   $('#button2').append('<p>HIDE ACTIVITY</p>');
  }
 
+ // if (window.location.pathname != )
+
  // On document load, hide all but the modal and the black opaque background
 
  $('#loginbutt').hide();
@@ -45,6 +47,19 @@ $(document).ready(function() {
   $('.block_out').show();
   $('.new_activity').removeClass('hidden');
   $('.new_activity').show();
+  $('#container').hide();
+  $('.leaflet-top').hide();
+  $('#search').hide();
+  $('#panel').hide();
+ });
+
+ $('.edit_activity_button').click(function() {
+  $('.block_out').removeClass('hidden');
+  $('.block_out').show();
+  $('.new_activity').removeClass('hidden');
+  $('.new_activity').show();
+  $('.new_activity h2').empty();
+  $('.new_activity h2').text('UPDATE AN ACTIVITY');
   $('#container').hide();
   $('.leaflet-top').hide();
   $('#search').hide();
