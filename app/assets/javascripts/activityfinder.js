@@ -64,7 +64,7 @@ $(document).ready(function() {
     _.each(layers, function(layer) {
       layercake[layer.title] = layer.layer;
     });
-    L.control.layers({}, layercake).addTo(map);
+    L.control.layers({}, layercake, {collapsed: false}).addTo(map);
   });
 
   $('button').click(function() {

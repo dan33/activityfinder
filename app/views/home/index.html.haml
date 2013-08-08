@@ -1,18 +1,21 @@
 %div#map_float
   %div#map
 
-%div#container
-  %div#profilepic
-    -if current_user.present?
-      = image_tag(current_user.image, :id => 'ppic')
-  %div#buttons
-    %div#button1
-    %div#button2
+-if current_user.present?
+  %div#container
+    %div#profilepic
       -if current_user.present?
-        %p Profile
-%div#panel.hidden
-  - if current_user.present?
-    = render 'users/show'
+        = image_tag(current_user.image, :id => 'ppic')
+    %div#buttons
+      %div#button1
+        -if current_user.present?
+          %p CREATE ACTIVITY
+      %div#button2
+        -if current_user.present?
+          %p PROFILE
+  %div#panel.hidden
+    - if current_user.present?
+      = render 'users/show'
 
 
 %div#search
