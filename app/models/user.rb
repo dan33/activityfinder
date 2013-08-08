@@ -38,13 +38,13 @@ class User < ActiveRecord::Base
   friendly_id :name, use: [:slugged, :history]
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable
+    :recoverable, :rememberable, :trackable
 
   validates_presence_of :name, :email, :city
 
-	has_many :memberships, :dependent => :destroy
-	has_many :activities, :through => :memberships
-	has_many :comments
+  has_many :memberships, :dependent => :destroy
+  has_many :activities, :through => :memberships
+  has_many :comments
 
   def geocode
     #over API query limit fix
