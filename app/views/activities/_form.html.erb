@@ -1,7 +1,11 @@
 <%= simple_form_for @activity do |f| %>
-	<%= f.input :title, :required => true, :autofocus => true %>
-	<%= f.input :description, :required => true %>
-	<%= f.input :address, :required => true %>
+<h2>CREATE AN ACTIVITY</h2><br><br>
+      <div id="close">
+    X
+   </div>
+	<%= f.input :title, :required => true, :autofocus => true, :placeholder => 'Name of the Activity: ' %>
+	<%= f.input :description, :required => true, :placeholder => 'Description: ' %>
+	<%= f.input :address, :required => true, :placeholder => 'Address: ' %>
 	<%= f.association :category, :required => true %>
 	<%= f.submit %>
 <% end %>
