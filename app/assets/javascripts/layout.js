@@ -1,9 +1,6 @@
 $(document).ready(function() {
 
-    "use strict";
-
-
-    if (window.location.pathname === "/") {
+    if (window.location.pathname == "/") {
         $('#panel').addClass("panel_show", 0);
     } else {
         $('#button2').empty();
@@ -19,7 +16,7 @@ $(document).ready(function() {
     });
 
     $('#search').keypress(function(e) {
-        if (e.which === 13) {
+        if (e.which == 13) {
             $("#search_submit").click();
         }
     });
@@ -36,9 +33,9 @@ $(document).ready(function() {
     });
 
     $('#button2').click(function() {
-        if (window.location.pathname !== "/") {
+        if (window.location.pathname != "/") {
             var text = $.trim($('#button2').text());
-            if (text === "SHOW ACTIVITY") {
+            if (text == "SHOW ACTIVITY") {
                 $('#button2').empty();
                 $('#button2').append('<p>HIDE ACTIVITY</p>');
             } else {
@@ -47,7 +44,7 @@ $(document).ready(function() {
             }
         } else {
             var text2 = $.trim($('#button2').text());
-            if (text2 === "SHOW PROFILE") {
+            if (text2 == "SHOW PROFILE") {
                 $('#button2').empty();
                 $('#button2').append('<p>HIDE PROFILE</p>');
             } else {
@@ -117,7 +114,7 @@ $(document).ready(function() {
         $('.leaflet-top').show();
         $('#search').show();
         $('#panel').hide();
-        if (window.location.pathname !== "/") {
+        if (window.location.pathname != "/") {
             $('#button2').empty();
             $('#button2').append('<p>SHOW ACTIVITY</p>');
         } else {
