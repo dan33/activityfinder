@@ -1,6 +1,8 @@
 - current_user.activities.each do |activity|
-  %div.activity
-    %h1.activity_title= link_to(activity.title, activity)
-    %p= pluralize(activity.comments.count, 'comments')
+  = link_to(activity) do
+    %div.activity
+      %h1.activity_title= activity.title
+      %p= pluralize(activity.comments.count, 'comments')
+
 
 
