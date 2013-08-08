@@ -18,7 +18,7 @@ ActivityFinder::Application.configure do
   config.assets.compile = false
 
   #send images to AWS
-  config.action_controller.asset_host = "https://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
+  #config.action_controller.asset_host = "https://#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
 
   # Generate digests for assets URLs
   config.assets.digest = true
