@@ -33,13 +33,25 @@ $(document).ready(function() {
     });
 
     $('#button2').click(function() {
-        var text = $('#button2').text();
-        if (text == "SHOW ACTIVITY") {
-            $('#button2').empty();
-            $('#button2').append('<p>HIDE ACTIVITY</p>');
+        if (window.location.pathname != "/") {
+            var text = $.trim($('#button2').text());
+            if (text == "SHOW ACTIVITY") {
+                $('#button2').empty();
+                $('#button2').append('<p>HIDE ACTIVITY</p>');
+            } else {
+                $('#button2').empty();
+                $('#button2').append('<p>SHOW ACTIVITY</p>');
+            }
         } else {
-            $('#button2').empty();
-            $('#button2').append('<p>SHOW ACTIVITY</p>');
+            var text2 = $.trim($('#button2').text());
+                if (text2 == "SHOW PROFILE") {
+                $('#button2').empty();
+                $('#button2').append('<p>HIDE PROFILE</p>');
+            } else {
+                $('#button2').empty();
+                $('#button2').append('<p>SHOW PROFILE</p>');
+            }
+
         }
         $('#panel').css({
             'width': '299px',
@@ -101,8 +113,13 @@ $(document).ready(function() {
         $('.leaflet-top').show();
         $('#search').show();
         $('#panel').hide();
-        $('#button2').empty();
-        $('#button2').append('<p>SHOW ACTIVITY</p>');
+        if (window.location.pathname != "/") {
+            $('#button2').empty();
+            $('#button2').append('<p>SHOW ACTIVITY</p>');
+        } else {
+            $('#button2').empty();
+            $('#button2').append('<p>SHOW PROFILE</p>');
+        }
     });
 
     $('#closelogin').click(function() {

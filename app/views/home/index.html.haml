@@ -12,7 +12,7 @@
           %p CREATE ACTIVITY
       %div#button2
         -if current_user.present?
-          %p PROFILE
+          %p SHOW PROFILE
   %div#panel.hidden
     - if current_user.present?
       = render 'users/show'
