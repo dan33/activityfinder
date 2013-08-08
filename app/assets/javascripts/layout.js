@@ -4,7 +4,7 @@ $(document).ready(function() {
         $('#panel').addClass("panel_show", 0);
     } else {
         $('#button2').empty();
-        $('#button2').append('<p>ACTIVITIES</p>');
+        $('#button2').append('<p>SHOW ACTIVITY</p>');
     }
 
     $('#loginbutt').hide();
