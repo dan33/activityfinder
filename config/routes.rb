@@ -8,7 +8,7 @@ ActivityFinder::Application.routes.draw do
 
   resources :categories, :only => [:show, :index]
 	resources :users, :only => [:show]
-  resources :activities, :only => [:new, :create, :index, :show]
+  resources :activities
   resources :comments
   resources :memberships
 
