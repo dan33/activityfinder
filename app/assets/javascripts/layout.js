@@ -60,7 +60,8 @@ $(document).ready(function() {
         $('#panel').toggle("blind", 600, function() {
             $('#panel').css({
                 'width': '293',
-                'overflow-y': 'auto'
+                'overflow-y': 'auto',
+                'overflow-x': 'hidden'
             });
         });
     });
