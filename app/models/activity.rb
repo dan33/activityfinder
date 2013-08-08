@@ -30,14 +30,14 @@ class Activity < ActiveRecord::Base
 
   def geocode
     #over API query limit fix
-    self.latitude = 32.3456
-    self.longitude = 141.4346
+    # self.latitude = 32.3456
+    # self.longitude = 141.4346
 
-    # result = Geocoder.search(self.address).first
-    #   if result.present?
-    #     self.latitude = result.latitude
-    #     self.longitude = result.longitude
-    #   end
+    result = Geocoder.search(self.address).first
+      if result.present?
+        self.latitude = result.latitude
+        self.longitude = result.longitude
+      end
   end
 
   def is_owner

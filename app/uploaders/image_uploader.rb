@@ -7,6 +7,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::MimeTypes
   process :set_content_type
 
+  # uncomment line below if local
+  #storage :file
+  #uncomment line below before pushing to github
   storage :fog
   # include CarrierWaveDirect::Uploader
 
@@ -18,7 +21,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   def default_url
-   "placeholder.jpg"
+   "/assets/placeholder.jpg"
   end
 
   # Process files as they are uploaded:
