@@ -13,9 +13,13 @@ $(document).ready(function() {
  // Think the following code works better than above.  Need to work on this...
 
  if (window.location.pathname != "/") {
+  $('#button1').empty();
+  $('#button1').append('<p>HOME</p>');
   $('#button2').empty();
   $('#button2').append('<p>HIDE ACTIVITY</p>');
  }
+
+ // if (window.location.pathname != )
 
  // On document load, hide all but the modal and the black opaque background
 
@@ -41,10 +45,27 @@ $(document).ready(function() {
  // Defines what to hide and show when particular things are clicked
 
  $('#button1').click(function() {
+  if (window.location.pathname == '/') {
+    $('.block_out').removeClass('hidden');
+    $('.block_out').show();
+    $('.new_activity').removeClass('hidden');
+    $('.new_activity').show();
+    $('#container').hide();
+    $('.leaflet-top').hide();
+    $('#search').hide();
+    $('#panel').hide();
+  } else {
+    window.location.replace("/");
+  }
+ });
+
+ $('.edit_activity_button').click(function() {
   $('.block_out').removeClass('hidden');
   $('.block_out').show();
   $('.new_activity').removeClass('hidden');
   $('.new_activity').show();
+  $('.new_activity h2').empty();
+  $('.new_activity h2').text('UPDATE AN ACTIVITY');
   $('#container').hide();
   $('.leaflet-top').hide();
   $('#search').hide();
