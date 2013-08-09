@@ -13,6 +13,8 @@ $(document).ready(function() {
  // Think the following code works better than above.  Need to work on this...
 
  if (window.location.pathname != "/") {
+  $('#button1').empty();
+  $('#button1').append('<p>HOME</p>');
   $('#button2').empty();
   $('#button2').append('<p>HIDE ACTIVITY</p>');
  }
