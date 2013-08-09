@@ -43,14 +43,18 @@ $(document).ready(function() {
  // Defines what to hide and show when particular things are clicked
 
  $('#button1').click(function() {
-  $('.block_out').removeClass('hidden');
-  $('.block_out').show();
-  $('.new_activity').removeClass('hidden');
-  $('.new_activity').show();
-  $('#container').hide();
-  $('.leaflet-top').hide();
-  $('#search').hide();
-  $('#panel').hide();
+  if (window.location.pathname == '/') {
+    $('.block_out').removeClass('hidden');
+    $('.block_out').show();
+    $('.new_activity').removeClass('hidden');
+    $('.new_activity').show();
+    $('#container').hide();
+    $('.leaflet-top').hide();
+    $('#search').hide();
+    $('#panel').hide();
+  } else {
+    window.location.replace("/");
+  }
  });
 
  $('.edit_activity_button').click(function() {
