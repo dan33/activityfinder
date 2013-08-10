@@ -27,7 +27,6 @@ class Activity < ActiveRecord::Base
   attr_accessible :address, :category_id, :description, :latitude, :longitude, :title
 
   validates_presence_of :address, :category_id, :description, :title
-  validates_uniqueness_of :description
 
   def geocode
     #over API query limit fix
