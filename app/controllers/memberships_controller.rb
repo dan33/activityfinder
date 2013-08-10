@@ -6,7 +6,7 @@ class MembershipsController < ApplicationController
     if @membership.save
       redirect_to @activity
     else
-      #render error messages partial
+      flash[:notice] = "Sorry you are unable to join this activity"
     end
   end
 

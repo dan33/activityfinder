@@ -2,10 +2,6 @@ class ActivitiesController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :locate]
   before_filter :authorize_user, :only => [:edit, :update, :destroy]
 
-  # def new
-  #   @activity = Activity.new
-  # end
-
   def create
     @activity = Activity.create(params[:activity])
     @membership = current_user.memberships.create(:activity_id => @activity.id, :role => 'owner')
@@ -31,6 +27,7 @@ class ActivitiesController < ApplicationController
     end
 
     respond_to do |format|
+      format.html { redirect_to root_path }
       format.json { render :json => cats }
     end
   end
@@ -39,7 +36,7 @@ class ActivitiesController < ApplicationController
     @activity = Activity.find(params[:id])
     @comments = @activity.comments
     @comment = Comment.new(:activity_id => params[:activity_id])
-    @owner = @activity.is_owner
+    @owner = @activity.owner_name
     # check to see if users are evident here
   end
 
@@ -59,7 +56,8 @@ class ActivitiesController < ApplicationController
 
   def destroy
     @activity = Activity.find_by_slug(params[:id])
-    if @activity.users == current_user
+    #check user is the only user remaining and also the owner
+    if @activity.users == [current_user] && owner?
       @activity.destroy
     else
       flash[:notice] = "You cannot delete an activity whilst it has other members"
@@ -98,6 +96,7 @@ class ActivitiesController < ApplicationController
   end
 
   private
+
   def authorize_user
     @activity = Activity.find(params[:id])
     unless current_user.memberships.where(:activity_id => @activity.id).first.role == "owner"

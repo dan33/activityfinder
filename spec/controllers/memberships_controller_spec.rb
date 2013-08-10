@@ -30,10 +30,6 @@ describe MembershipsController do
       it "it doesn't create a membership" do
         expect(Membership.count).to eq(1)
       end
-
-      it "flashes an error message" do
-        pending
-      end
     end
   end
 

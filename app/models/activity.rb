@@ -40,10 +40,7 @@ class Activity < ActiveRecord::Base
       end
   end
 
-  def is_owner
+  def owner_name
     self.memberships.where(:role => 'owner').first.user.name
   end
-
-
-
 end

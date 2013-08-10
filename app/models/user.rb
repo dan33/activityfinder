@@ -60,5 +60,4 @@ class User < ActiveRecord::Base
         self.longitude = 141.4346
       end
   end
-
 end
