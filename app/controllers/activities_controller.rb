@@ -27,6 +27,7 @@ class ActivitiesController < ApplicationController
     end
 
     respond_to do |format|
+      format.html { redirect_to root_path }
       format.json { render :json => cats }
     end
   end
