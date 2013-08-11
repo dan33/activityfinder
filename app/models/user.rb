@@ -48,16 +48,16 @@ class User < ActiveRecord::Base
 
   def geocode
     #over API query limit fix
-    # self.latitude = 32.3456
-    # self.longitude = 141.4346
+    self.latitude = 32.3456
+    self.longitude = 141.4346
 
-    result = Geocoder.search(self.city).first
-      if result.present?
-        self.latitude = result.latitude
-        self.longitude = result.longitude
-      else
-        self.latitude = 32.3456
-        self.longitude = 141.4346
-      end
+    # result = Geocoder.search(self.city).first
+    #   if result.present?
+    #     self.latitude = result.latitude
+    #     self.longitude = result.longitude
+    #   else
+    #     self.latitude = 32.3456
+    #     self.longitude = 141.4346
+    #   end
   end
 end

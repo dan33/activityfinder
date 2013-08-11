@@ -41,6 +41,7 @@ class ActivitiesController < ApplicationController
   end
 
   def edit
+    binding.pry
     @activity = Activity.find_by_slug(params[:id])
     render 'edit'
   end

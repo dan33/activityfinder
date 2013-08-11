@@ -176,17 +176,26 @@ describe ActivitiesController do
       @user = FactoryGirl.create(:user)
       sign_in @user
       @category = Category.create(:title => 'Relaxation')
-      @activity = Activity.create( :title => "blah", :description => "excellent activity", :category_id => 1, :address => "Bondi Road Medical Centre, Bondi Road, Bondi, New South Wales")
-      @category.activities << @activity
-      @user.activities << @activity
-      @user.memberships.first.role = "owner"
-      @user.save
+      @activity2 = Activity.create( :title => "blah", :description => "excellent activity", :category_id => @category.id, :address => "Bondi Road Medical Centre, Bondi Road, Bondi, New South Wales")
+      @category.activities << @activity2
+      @user.activities << @activity2
       @category.save
-      @activity.save
+      @activity2.save
+      Membership.where(:activity_id => @activity2.id, :user_id => @user.id).first.role = "owner"
+      Membership.where(:activity_id => @activity2.id, :user_id => @user.id).first.save
+      @activity2.save
+      @user.save
+
+      get :edit, { :id => @activity2.id}
     end
 
+    it "should assign activity" do
+      expect(assigns(:activity).memberships.first.role).to eq("owner")
+      expect(assigns(:activity)).to be
+    end
 
-    it "should" do
+    it "should render the edit partial" do
+       expect(response).to render_template("edit")
     end
   end
 end
