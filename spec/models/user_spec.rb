@@ -60,44 +60,8 @@ describe User do
       expect(@user.longitude).to_not eq(nil)
       expect(@user.latitude).to_not eq(nil)
     end
-
-    it "should be a creator if they create an activity" do
-      expect(@user2.memberships.first.role).to eq('owner')
-    end
-
-    it "should be a member if join an activity" do
-      @user.activities << @activity2
-      @user.save
-      @activity2.save
-      expect(@user.memberships.count).to eq(1)
-    end
-
-    it "should be able to leave activity if member" do
-      @user.activities << @activity
-      @activity.save
-      @user.save
-      c = @user.memberships.count
-      m = @user.memberships.last
-      m.destroy
-      m.save
-      expect (@user.memberships.count).to eq(c - 1)
-    end
-
-    it "should not be able to leave activity if creator" do
-    end
-
-    it "should be able to delete an activity if there are no members" do
-    end
-
-    it "should not be able to join an activity if already member" do
-    end
-
-    it "should be able to join an activity" do
-      #@membership = Membership.create(:user_id = @user2.id, :activity_id => @activity.id)
-      #@user.activities << @activity
-      #expect(@activity.users.count).to eq(2)
-    end
   end
+
 
   describe "An invalid user" do
     before do
