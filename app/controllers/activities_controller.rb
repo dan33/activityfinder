@@ -40,11 +40,10 @@ class ActivitiesController < ApplicationController
     # check to see if users are evident here
   end
 
-  def edit
-    binding.pry
-    @activity = Activity.find_by_slug(params[:id])
-    render 'edit'
-  end
+  # def edit
+  #   @activity = Activity.find_by_slug(params[:id])
+  #   render 'edit'
+  # end
 
   def update
     @activity = Activity.find_by_slug(params[:id])
