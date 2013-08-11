@@ -40,6 +40,24 @@ a {
   display: none;
 }
 
+#flash_notice {
+  width: 300px;
+  height: auto;
+  z-index: 3000000000000;
+  background: black;
+  left: 0;
+  margin-left: 20px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 26px;
+  line-height: 1.4em;
+  opacity: 0.6;
+}
+
 
 // MAP STYLING
 

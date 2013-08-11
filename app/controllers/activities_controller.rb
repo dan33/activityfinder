@@ -59,9 +59,11 @@ class ActivitiesController < ApplicationController
     #check user is the only user remaining and also the owner
     if @activity.users == [current_user] && owner?
       @activity.destroy
-    else
-      flash[:notice] = "You cannot delete an activity whilst it has other members"
       redirect_to root_path
+      flash[:notice] = "You successfully deleted the activity"
+    else
+      redirect_to root_path
+      flash[:notice] = "You cannot delete an activity whilst it has other members"
     end
   end
 

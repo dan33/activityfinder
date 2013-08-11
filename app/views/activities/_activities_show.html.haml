@@ -5,6 +5,7 @@
 
 - if member? && owner?
   %p.edit_activity_button Edit Activity
+  = button_to 'Delete Activity', activity_path(:activity_id => params[:id]), :method => :delete
 
 - if member?
   = button_to 'Leave activity', membership_path(current_user.memberships.where(:activity_id => @activity).first), :method => :delete unless owner?
