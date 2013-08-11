@@ -193,18 +193,6 @@ describe ActivitiesController do
       put :update, :id => @activity5.id, :activity => params
     end
 
-# params = {'email' => 'example@example.com'}
-#         @user.should_receive(:update_attributes).with(params)
-#         put :update, :id => @user.id, :user => params
-
-
-#     it 'should pass movie object the new attribute value to updated' do
-#   fake_new_rating = 'PG-15'
-#   Movie.stub(:find).and_return(@fake_movie)
-#   @fake_movie.should_receive(:update_attributes!).with("rating" => fake_new_rating).and_return(:true)
-#   put :update, :id => @fake_movie.id, :movie => {:rating => fake_new_rating}
-# end
-
     it "should reject invalid updates" do
       @activity3.title = nil
       @activity3.should_not be_valid
