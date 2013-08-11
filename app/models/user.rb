@@ -58,6 +58,6 @@ class User < ActiveRecord::Base
       else
         self.latitude = 32.3456
         self.longitude = 141.4346
-    #   end
+      end
   end
 end
