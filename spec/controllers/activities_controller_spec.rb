@@ -6,7 +6,6 @@ describe ActivitiesController do
       5.times { |i| @activity = FactoryGirl.create(:activity) }
     end
 
-
     context "as HTML request" do
 
       before do
@@ -24,7 +23,6 @@ describe ActivitiesController do
         expect(assigns(:activities).first.class).to eq(Activity)
       end
     end
-
 
     context 'as JSON request' do
       # before { pending }
@@ -173,35 +171,82 @@ describe ActivitiesController do
     end
   end
 
-  describe "Get activities #edit" do
+  describe "Get activities #update" do
     before do
       @user = FactoryGirl.create(:user)
       sign_in @user
-      @activity2 = FactoryGirl.create(:activity)
-      # @activity2 = Activity.create( :title => "blah", :description => "excellent activity", :category_id => @category.id, :address => "Bondi Road Medical Centre, Bondi Road, Bondi, New South Wales")
-      @category = Category.create(:title => 'Relaxation')
-      @user.activities << @activity2
+      @activity4 = FactoryGirl.create(:activity)
+      @user.activities << @activity4
       @user.save
-      @category.activities << @activity2
-      @category.save
-      @membership = Membership.create(:activity_id => @activity2.id, :user_id => @user.id)
-      @membership.save
-      @user.memberships[0].role = "owner"
+      @activity5 = mock_model(Activity)
+      @membership = @user.memberships.create(:activity_id => @activity4.id)
       @user.memberships[0].save
     end
 
-    it "should assign activity" do
-      expect(@user.memberships.first.role).to eq("owner")
+    it "finds the correct activity" do
+      @activity = Activity.find(@activity3.id)
     end
 
-    # it "should render the edit partial" do
-    #   response.should render_template("edit")
+    it "and if valid it should be able to update attributes" do
+      params = { :title => 'Bondi', :description => 'Bondi', :address => 'Bondi Beach' }
+      @activity5.should_recieve(:update_attributes).with(params)
+      put :update, :id => @activity5.id, :activity => params
+    end
+
+# params = {'email' => 'example@example.com'}
+#         @user.should_receive(:update_attributes).with(params)
+#         put :update, :id => @user.id, :user => params
+
+
+#     it 'should pass movie object the new attribute value to updated' do
+#   fake_new_rating = 'PG-15'
+#   Movie.stub(:find).and_return(@fake_movie)
+#   @fake_movie.should_receive(:update_attributes!).with("rating" => fake_new_rating).and_return(:true)
+#   put :update, :id => @fake_movie.id, :movie => {:rating => fake_new_rating}
+# end
+
+    it "should reject invalid updates" do
+      @activity3.title = nil
+      @activity3.should_not be_valid
+    end
+
+    it "should redirect if the update was invalid" do
+      render :template => "/"
+      rendered.should include("/activities/_editform.html")
+    end
+  end
+
+  describe "Get activities #destroy" do
+    before do
+      @user = FactoryGirl.create(:user)
+      sign_in @user
+      @activity3 = FactoryGirl.create(:activity)
+      @user.activities << @activity3
+      @user.save
+      @membership = @user.memberships.create(:activity_id => @activity3.id)
+      @user.memberships[0].save
+    end
+
+    it "should be able to find the correct activity" do
+      Activity.find(@activity3.slug)
+    end
+
+    it "should find the users in the activity" do
+      @activity3.users == @user
+      expect(@activity3.users.count).to eq(1)
+    end
+
+    # it "should destroy that activity" do
+    #   @user.memberships.destroy_all
+    #   @activity3.destroy
+    #   expect(@activity3).to_not be
     # end
+
+    it "should then redirect to the root page" do
+      response.should redirect_to(root_path)
+    end
   end
 end
-
-
-
 
 
 #     end
